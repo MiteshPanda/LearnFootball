@@ -1,0 +1,154 @@
+{
+  "name": "Spain",
+  "slug": "spain",
+  "flag": "🇪🇸",
+  "active": true,
+  "api_id": 9,
+  "titles": "1× World Cup",
+  "style": "Tiki-Taka / Absolute Possession",
+  "bio": "Spain (La Roja) defined an entire era of modern football with 'Tiki-Taka'. Built upon the technical superiority of small, creative midfielders and a commitment to possession, Spain dominated international football from 2008 to 2012.",
+  "tacticalIdentity": "Tiki-Taka focuses on absolute possession, short rapid passing, triangular movements, and constant rotation of midfielders. The philosophy believes that if the opponent doesn't have the ball, they cannot score.",
+  "squad": [
+    {
+      "name": "Andrés Iniesta",
+      "position": "Midfielder",
+      "role": "Legendary"
+    },
+    {
+      "name": "Xavi Hernández",
+      "position": "Midfielder",
+      "role": "Legendary"
+    },
+    {
+      "name": "Sergio Ramos",
+      "position": "Defender",
+      "role": "Legendary"
+    },
+    {
+      "name": "Iker Casillas",
+      "position": "Goalkeeper",
+      "role": "Legendary"
+    },
+    {
+      "name": "Rodri",
+      "position": "Defensive Mid",
+      "role": "Star"
+    },
+    {
+      "name": "Lamine Yamal",
+      "position": "Winger",
+      "role": "Modern"
+    }
+  ],
+  "stats": [
+    {
+      "label": "World Cups",
+      "value": "1"
+    },
+    {
+      "label": "Euros",
+      "value": "4"
+    },
+    {
+      "label": "FIFA Rank",
+      "value": "2nd"
+    },
+    {
+      "label": "Euro 2024",
+      "value": "Winners"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2008",
+      "title": "Euro 2008 Triumph",
+      "description": "Broke decades of underachievement by defeating Germany in Vienna under Luis Aragonés."
+    },
+    {
+      "year": "2010",
+      "title": "World Cup Glory",
+      "description": "Andrés Iniesta scored the extra-time winner against the Netherlands to claim Spain's first World Cup."
+    },
+    {
+      "year": "2012",
+      "title": "Historic Treble",
+      "description": "Defeated Italy 4-0 in the Euro 2012 final, completing an unprecedented consecutive three major title run."
+    },
+    {
+      "year": "2024",
+      "title": "Euro 2024 Champions",
+      "description": "Won every single game in Germany to win their record-breaking 4th European Championship."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "FIFA World Cup",
+      "count": 1
+    },
+    {
+      "title": "UEFA European Championship",
+      "count": 4
+    },
+    {
+      "title": "UEFA Nations League",
+      "count": 1
+    }
+  ],
+  "worldCupSquad": [
+    {
+      "number": 1,
+      "name": "David Raya",
+      "position": "Goalkeeper"
+    },
+    {
+      "number": 2,
+      "name": "Marc Pubill",
+      "position": "Defender"
+    },
+    {
+      "number": 3,
+      "name": "Álex Grimaldo",
+      "position": "Defender"
+    },
+    {
+      "number": 4,
+      "name": "Eric García",
+      "position": "Defender"
+    },
+    {
+      "number": 5,
+      "name": "Marcos Llorente",
+      "position": "Midfielder"
+    },
+    {
+      "number": 6,
+      "name": "Mikel Merino",
+      "position": "Midfielder"
+    },
+    {
+      "number": 7,
+      "name": "Ferran Torres",
+      "position": "Midfielder"
+    },
+    {
+      "number": 8,
+      "name": "Fabián Ruiz",
+      "position": "Midfielder"
+    },
+    {
+      "number": 9,
+      "name": "Gavi",
+      "position": "Forward"
+    },
+    {
+      "number": 12,
+      "name": "Pedro Porro",
+      "position": "Defender"
+    },
+    {
+      "number": 15,
+      "name": "Álex Baena",
+      "position": "Forward"
+    }
+  ]
+}

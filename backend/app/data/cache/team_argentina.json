@@ -1,0 +1,158 @@
+{
+  "name": "Argentina",
+  "slug": "argentina",
+  "flag": "🇦🇷",
+  "active": true,
+  "api_id": 26,
+  "titles": "3× World Cup",
+  "style": "La Nuestra / Flair & Passion",
+  "bio": "Argentina has a rich footballing history defined by passion, supreme individual talent, and tactical innovation. The home of Diego Maradona and Lionel Messi, La Albiceleste has captured the world's imagination for generations.",
+  "tacticalIdentity": "Historically, Argentine football revolves around 'La Nuestra'—a style emphasizing high technical skill, dribbling, and creativity. Modern systems blend this traditional flair with aggressive counter-pressing and structured defensive support to liberate their creative playmakers.",
+  "squad": [
+    {
+      "name": "Lionel Messi",
+      "position": "Forward",
+      "role": "Star"
+    },
+    {
+      "name": "Diego Maradona",
+      "position": "Attacking Mid",
+      "role": "Legendary"
+    },
+    {
+      "name": "Mario Kempes",
+      "position": "Striker",
+      "role": "Legendary"
+    },
+    {
+      "name": "Angel Di Maria",
+      "position": "Winger",
+      "role": "Modern"
+    },
+    {
+      "name": "Emiliano Martínez",
+      "position": "Goalkeeper",
+      "role": "Modern"
+    },
+    {
+      "name": "Javier Zanetti",
+      "position": "Full-Back",
+      "role": "Legendary"
+    }
+  ],
+  "stats": [
+    {
+      "label": "World Cups",
+      "value": "3"
+    },
+    {
+      "label": "Copa Américas",
+      "value": "15"
+    },
+    {
+      "label": "FIFA Rank",
+      "value": "1st"
+    },
+    {
+      "label": "Matches",
+      "value": "1000+"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "1978",
+      "title": "First World Cup Title",
+      "description": "Won the tournament on home soil, led by top scorer Mario Kempes."
+    },
+    {
+      "year": "1986",
+      "title": "Maradona's Masterpiece",
+      "description": "Diego Maradona captained Argentina to a second World Cup in Mexico with legendary performances."
+    },
+    {
+      "year": "2021",
+      "title": "Copa América Triumph",
+      "description": "Defeated Brazil in Rio to end a 28-year senior international trophy drought."
+    },
+    {
+      "year": "2022",
+      "title": "Third Star in Qatar",
+      "description": "Lionel Messi led La Albiceleste to World Cup glory in one of the greatest finals ever played."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "FIFA World Cup",
+      "count": 3
+    },
+    {
+      "title": "Copa América",
+      "count": 15
+    },
+    {
+      "title": "FIFA Confederations Cup",
+      "count": 1
+    },
+    {
+      "title": "CONMEBOL-UEFA Cup of Champions",
+      "count": 2
+    }
+  ],
+  "worldCupSquad": [
+    {
+      "number": 1,
+      "name": "J. Musso",
+      "position": "Goalkeeper"
+    },
+    {
+      "number": 2,
+      "name": "M. Senesi",
+      "position": "Midfielder"
+    },
+    {
+      "number": 3,
+      "name": "N. Tagliafico",
+      "position": "Defender"
+    },
+    {
+      "number": 4,
+      "name": "G. Montiel",
+      "position": "Defender"
+    },
+    {
+      "number": 5,
+      "name": "L. Paredes",
+      "position": "Midfielder"
+    },
+    {
+      "number": 6,
+      "name": "Lisandro Martínez",
+      "position": "Defender"
+    },
+    {
+      "number": 7,
+      "name": "R. De Paul",
+      "position": "Midfielder"
+    },
+    {
+      "number": 8,
+      "name": "V. Barco",
+      "position": "Midfielder"
+    },
+    {
+      "number": 9,
+      "name": "J. Álvarez",
+      "position": "Forward"
+    },
+    {
+      "number": 10,
+      "name": "L. Messi",
+      "position": "Forward"
+    },
+    {
+      "number": 13,
+      "name": "C. Romero",
+      "position": "Defender"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "name": "France",
+  "slug": "france",
+  "flag": "🇫🇷",
+  "active": true,
+  "api_id": 2,
+  "titles": "2× World Cup",
+  "style": "Pragmatism & Lightning Transitions",
+  "bio": "France (Les Bleus) has risen to become a dominant powerhouse of modern football. Blessed with incredible multi-cultural diversity and world-class academies, France blends physical dominance with supreme technical elegance.",
+  "tacticalIdentity": "Under Didier Deschamps, France focuses on a highly organized defensive shape, minimizing risk in possession, and utilizing lightning-fast counter-attacks through explosive wingers like Kylian Mbappé.",
+  "squad": [
+    {
+      "name": "Zinedine Zidane",
+      "position": "Attacking Mid",
+      "role": "Legendary"
+    },
+    {
+      "name": "Kylian Mbappé",
+      "position": "Forward",
+      "role": "Star"
+    },
+    {
+      "name": "Thierry Henry",
+      "position": "Striker",
+      "role": "Legendary"
+    },
+    {
+      "name": "Antoine Griezmann",
+      "position": "Midfielder / Forward",
+      "role": "Modern"
+    },
+    {
+      "name": "Michel Platini",
+      "position": "Playmaker",
+      "role": "Legendary"
+    },
+    {
+      "name": "N'Golo Kanté",
+      "position": "Defensive Mid",
+      "role": "Modern"
+    }
+  ],
+  "stats": [
+    {
+      "label": "World Cups",
+      "value": "2"
+    },
+    {
+      "label": "Euros",
+      "value": "2"
+    },
+    {
+      "label": "FIFA Rank",
+      "value": "3rd"
+    },
+    {
+      "label": "UCL Winners",
+      "value": "Many"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "1984",
+      "title": "Platini's Euro Domination",
+      "description": "Michel Platini scored a record 9 goals in 5 games to secure France's first European Championship."
+    },
+    {
+      "year": "1998",
+      "title": "First World Cup Star",
+      "description": "Zidane scored twice in Paris as the host nation defeated Brazil 3-0 in the final."
+    },
+    {
+      "year": "2000",
+      "title": "Double Champions",
+      "description": "Won Euro 2000 with a golden goal from David Trezeguet, completing a rare double."
+    },
+    {
+      "year": "2018",
+      "title": "Glory in Russia",
+      "description": "A young, explosive French team defeated Croatia 4-2 in Moscow to claim their second World Cup."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "FIFA World Cup",
+      "count": 2
+    },
+    {
+      "title": "UEFA European Championship",
+      "count": 2
+    },
+    {
+      "title": "FIFA Confederations Cup",
+      "count": 2
+    },
+    {
+      "title": "UEFA Nations League",
+      "count": 1
+    }
+  ],
+  "worldCupSquad": [
+    {
+      "number": 1,
+      "name": "B. Samba",
+      "position": "Goalkeeper"
+    },
+    {
+      "number": 2,
+      "name": "M. Gusto",
+      "position": "Defender"
+    },
+    {
+      "number": 3,
+      "name": "L. Digne",
+      "position": "Defender"
+    },
+    {
+      "number": 4,
+      "name": "D. Upamecano",
+      "position": "Defender"
+    },
+    {
+      "number": 5,
+      "name": "J. Koundé",
+      "position": "Defender"
+    },
+    {
+      "number": 6,
+      "name": "M. Koné",
+      "position": "Midfielder"
+    },
+    {
+      "number": 7,
+      "name": "O. Dembélé",
+      "position": "Midfielder"
+    },
+    {
+      "number": 8,
+      "name": "A. Tchouaméni",
+      "position": "Midfielder"
+    },
+    {
+      "number": 9,
+      "name": "M. Thuram",
+      "position": "Midfielder"
+    },
+    {
+      "number": 10,
+      "name": "Kylian Mbappé",
+      "position": "Forward"
+    },
+    {
+      "number": 22,
+      "name": "J. Mateta",
+      "position": "Forward"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "name": "Germany",
+  "slug": "germany",
+  "flag": "🇩🇪",
+  "active": true,
+  "api_id": 25,
+  "titles": "4× World Cup",
+  "style": "Raumdeuter / Positional Efficiency",
+  "bio": "Germany (Die Mannschaft) is the epitome of tournament resilience, tactical intelligence, and collective strength. Always competing at the business end of tournaments, German football blends robust physical structure with modern positional play.",
+  "tacticalIdentity": "German football has transitioned from powerful physical efficiency to dynamic positional play. Their style emphasizes occupying half-spaces, high pressing, and intelligent player movement (like the 'Raumdeuter' or space investigator).",
+  "squad": [
+    {
+      "name": "Franz Beckenbauer",
+      "position": "Defender / Sweeper",
+      "role": "Legendary"
+    },
+    {
+      "name": "Gerd Müller",
+      "position": "Striker",
+      "role": "Legendary"
+    },
+    {
+      "name": "Lothar Matthäus",
+      "position": "Midfielder",
+      "role": "Legendary"
+    },
+    {
+      "name": "Thomas Müller",
+      "position": "Raumdeuter",
+      "role": "Modern"
+    },
+    {
+      "name": "Manuel Neuer",
+      "position": "Sweeper-Keeper",
+      "role": "Star"
+    },
+    {
+      "name": "Toni Kroos",
+      "position": "Midfielder",
+      "role": "Modern"
+    }
+  ],
+  "stats": [
+    {
+      "label": "World Cups",
+      "value": "4"
+    },
+    {
+      "label": "Euros",
+      "value": "3"
+    },
+    {
+      "label": "FIFA Rank",
+      "value": "10th"
+    },
+    {
+      "label": "WC Finals",
+      "value": "8"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "1954",
+      "title": "The Miracle of Bern",
+      "description": "Dealt the legendary Hungarian 'Golden Team' their first defeat in 4 years to win their 1st World Cup."
+    },
+    {
+      "year": "1974",
+      "title": "Beckenbauer's Triumph",
+      "description": "Der Kaiser captained Germany to victory on home soil, defeating Cruyff's Total Football."
+    },
+    {
+      "year": "1990",
+      "title": "Matthäus Captains Unified Germany",
+      "description": "Defeated Maradona's Argentina in Rome just before the formal reunification of Germany."
+    },
+    {
+      "year": "2014",
+      "title": "Historic 7-1 & Fourth Star",
+      "description": "Swept past hosts Brazil 7-1 in the semi-final before Mario Götze's extra-time goal won the final."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "FIFA World Cup",
+      "count": 4
+    },
+    {
+      "title": "UEFA European Championship",
+      "count": 3
+    },
+    {
+      "title": "FIFA Confederations Cup",
+      "count": 1
+    }
+  ],
+  "worldCupSquad": [
+    {
+      "number": 1,
+      "name": "M. Neuer",
+      "position": "Goalkeeper"
+    },
+    {
+      "number": 2,
+      "name": "A. Rüdiger",
+      "position": "Defender"
+    },
+    {
+      "number": 3,
+      "name": "W. Anton",
+      "position": "Defender"
+    },
+    {
+      "number": 4,
+      "name": "J. Tah",
+      "position": "Defender"
+    },
+    {
+      "number": 5,
+      "name": "A. Pavlovic",
+      "position": "Midfielder"
+    },
+    {
+      "number": 6,
+      "name": "J. Kimmich",
+      "position": "Defender"
+    },
+    {
+      "number": 7,
+      "name": "K. Havertz",
+      "position": "Forward"
+    },
+    {
+      "number": 8,
+      "name": "L. Goretzka",
+      "position": "Midfielder"
+    },
+    {
+      "number": 9,
+      "name": "J. Leweling",
+      "position": "Forward"
+    },
+    {
+      "number": 10,
+      "name": "J. Musiala",
+      "position": "Midfielder"
+    },
+    {
+      "number": 13,
+      "name": "P. Groß",
+      "position": "Midfielder"
+    }
+  ]
+}

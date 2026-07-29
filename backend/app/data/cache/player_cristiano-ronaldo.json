@@ -1,0 +1,86 @@
+{
+  "name": "Cristiano Ronaldo",
+  "slug": "cristiano-ronaldo",
+  "active": true,
+  "api_id": 874,
+  "position": "Forward",
+  "country": "🇵🇹",
+  "countryName": "Portugal",
+  "bio": "An absolute powerhouse of modern football, Ronaldo has won 5 Ballon d'Or awards and holds the records for most goals scored in the Champions League, European Championship, and international football.",
+  "style": "Ronaldo transitioned from a tricky, lightning-fast winger to a physically dominant, elite goalscoring striker. He combines explosive athleticism, aerial ability, and lethal finishing with both feet.",
+  "stats": [
+    {
+      "label": "Goals",
+      "value": "970+"
+    },
+    {
+      "label": "Assists",
+      "value": "240+"
+    },
+    {
+      "label": "Ballon d'Or",
+      "value": "5"
+    },
+    {
+      "label": "App",
+      "value": "1200+"
+    },
+    {
+      "label": "2024 Apps",
+      "value": "76"
+    },
+    {
+      "label": "2024 Goals",
+      "value": "65"
+    },
+    {
+      "label": "2024 Assists",
+      "value": "7"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2003",
+      "title": "Manchester United Transfer",
+      "description": "Joined Manchester United from Sporting CP, inheriting the iconic #7 shirt."
+    },
+    {
+      "year": "2008",
+      "title": "First Champions League & Ballon d'Or",
+      "description": "Scored in the UCL Final victory and claimed his first Ballon d'Or."
+    },
+    {
+      "year": "2009",
+      "title": "Real Madrid Move",
+      "description": "Joined Real Madrid for a world-record fee, going on to score 450 goals in 438 matches."
+    },
+    {
+      "year": "2016",
+      "title": "Euro 2016 Glory",
+      "description": "Captained Portugal to their first-ever major international trophy in France."
+    },
+    {
+      "year": "2023",
+      "title": "International Goals Record",
+      "description": "Solidified his place as the top international goalscorer of all time."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "UEFA European Championship",
+      "count": 1
+    },
+    {
+      "title": "UEFA Champions League",
+      "count": 5
+    },
+    {
+      "title": "Premier League",
+      "count": 3
+    },
+    {
+      "title": "La Liga",
+      "count": 2
+    }
+  ]
+}

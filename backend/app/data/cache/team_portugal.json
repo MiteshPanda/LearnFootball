@@ -1,0 +1,150 @@
+{
+  "name": "Portugal",
+  "slug": "portugal",
+  "flag": "🇵🇹",
+  "active": true,
+  "api_id": 27,
+  "titles": "1× Euro Championship",
+  "style": "Dynamic Attack & Countering Structure",
+  "bio": "Portugal (Seleção das Quinas) has consistently punched above its weight, developing some of the most gifted wingers and forwards in history, including Eusébio, Luís Figo, and Cristiano Ronaldo.",
+  "tacticalIdentity": "Portuguese football combines solid tactical discipline and defensive blocks with highly explosive, creative attacking transitions. Players focus on technical dribbling, tactical intelligence, and exploiting spaces via quick wing attacks.",
+  "squad": [
+    {
+      "name": "Cristiano Ronaldo",
+      "position": "Forward",
+      "role": "Star"
+    },
+    {
+      "name": "Eusébio",
+      "position": "Striker",
+      "role": "Legendary"
+    },
+    {
+      "name": "Luís Figo",
+      "position": "Winger",
+      "role": "Legendary"
+    },
+    {
+      "name": "Bernardo Silva",
+      "position": "Midfielder / Winger",
+      "role": "Modern"
+    },
+    {
+      "name": "Bruno Fernandes",
+      "position": "Attacking Mid",
+      "role": "Modern"
+    },
+    {
+      "name": "Rui Costa",
+      "position": "Playmaker",
+      "role": "Legendary"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Euros",
+      "value": "1"
+    },
+    {
+      "label": "Nations League",
+      "value": "2"
+    },
+    {
+      "label": "FIFA Rank",
+      "value": "5th"
+    },
+    {
+      "label": "Goals (CR7)",
+      "value": "130+"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "1966",
+      "title": "Eusébio's Bronze Campaign",
+      "description": "Eusébio led Portugal to a third-place finish in their debut World Cup, scoring 9 goals."
+    },
+    {
+      "year": "2004",
+      "title": "Euro 2004 Heartbreak",
+      "description": "Reached the final on home soil but suffered a shock 1-0 defeat to underdogs Greece."
+    },
+    {
+      "year": "2016",
+      "title": "First Major Trophy",
+      "description": "Eder's extra-time goal defeated hosts France in Paris to secure Euro 2016 glory."
+    },
+    {
+      "year": "2019",
+      "title": "Nations League Winners",
+      "description": "Won the inaugural UEFA Nations League tournament on home soil, defeating the Netherlands."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "UEFA European Championship",
+      "count": 1
+    },
+    {
+      "title": "UEFA Nations League",
+      "count": 1
+    }
+  ],
+  "worldCupSquad": [
+    {
+      "number": 1,
+      "name": "Diego Costa",
+      "position": "Goalkeeper"
+    },
+    {
+      "number": 20,
+      "name": "Joao Cancelo",
+      "position": "Right Back"
+    },
+    {
+      "number": 14,
+      "name": "Goncalo Inacio",
+      "position": "Right Central Defender"
+    },
+    {
+      "number": 3,
+      "name": "Ruben Dias",
+      "position": "Left Central Defender"
+    },
+    {
+      "number": 25,
+      "name": "Nuno Mendes",
+      "position": "Left Back"
+    },
+    {
+      "number": 23,
+      "name": "Vitinha",
+      "position": "Defensive Midfielder"
+    },
+    {
+      "number": 15,
+      "name": "Joao Neves",
+      "position": "Defensive Midfielder"
+    },
+    {
+      "number": 18,
+      "name": "Pedro Neto",
+      "position": "Attacking Midfielder"
+    },
+    {
+      "number": 10,
+      "name": "Bernardo Silva",
+      "position": "Attacking Midfielder"
+    },
+    {
+      "number": 8,
+      "name": "Bruno Fernandes",
+      "position": "Attacking Midfielder"
+    },
+    {
+      "number": 7,
+      "name": "Cristiano Ronaldo",
+      "position": "Forward"
+    }
+  ]
+}

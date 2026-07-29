@@ -1,0 +1,94 @@
+{
+  "name": "Pep Guardiola",
+  "slug": "pep-guardiola",
+  "active": true,
+  "api_id": 4,
+  "philosophy": "Positional Play",
+  "club": "Manchester City",
+  "emoji": "🧠",
+  "country": "🇪🇸",
+  "countryName": "Spain",
+  "bio": "Famous for his obsessive tactical perfectionism and high-possession style, Guardiola revolutionized modern football at Barcelona, Bayern Munich, and Manchester City.",
+  "style": "Guardiola is the leading advocate of 'Juego de Posición' (Positional Play). His teams utilize short passes, extreme high press, building out from the goalkeeper, and using inverted fullbacks or defenders stepping into midfield to create central overloads.",
+  "clubsManaged": [
+    {
+      "name": "Barcelona B",
+      "years": "2007-2008"
+    },
+    {
+      "name": "Barcelona",
+      "years": "2008-2012"
+    },
+    {
+      "name": "Bayern Munich",
+      "years": "2013-2016"
+    },
+    {
+      "name": "Manchester City",
+      "years": "2016-Present"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Win %",
+      "value": "72.5%"
+    },
+    {
+      "label": "Matches",
+      "value": "900+"
+    },
+    {
+      "label": "UCL Titles",
+      "value": "3"
+    },
+    {
+      "label": "League Titles",
+      "value": "12"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2008",
+      "title": "Barcelona Appointment",
+      "description": "Promoted to first-team manager, shifting the squad towards a possession-heavy style."
+    },
+    {
+      "year": "2009",
+      "title": "Historic Sextuple",
+      "description": "Won all six available club trophies in his debut season, a football first."
+    },
+    {
+      "year": "2013",
+      "title": "Bayern Munich Project",
+      "description": "Brought his possession style to Germany, winning three Bundesliga titles in a row."
+    },
+    {
+      "year": "2017",
+      "title": "Centurions Season",
+      "description": "Led Manchester City to a record-breaking 100 points in the Premier League."
+    },
+    {
+      "year": "2023",
+      "title": "Treble Victory",
+      "description": "Won the Champions League, Premier League, and FA Cup in a historic campaign."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "UEFA Champions League",
+      "count": 3
+    },
+    {
+      "title": "Premier League",
+      "count": 6
+    },
+    {
+      "title": "La Liga",
+      "count": 3
+    },
+    {
+      "title": "Bundesliga",
+      "count": 3
+    }
+  ]
+}

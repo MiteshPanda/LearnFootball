@@ -1,0 +1,98 @@
+{
+  "name": "José Mourinho",
+  "slug": "jose-mourinho",
+  "active": true,
+  "api_id": 2462,
+  "philosophy": "Pragmatic Defense & Transitions",
+  "club": "Benfica",
+  "emoji": "🛡️",
+  "country": "🇵🇹",
+  "countryName": "Portugal",
+  "bio": "One of the most successful and controversial managers in history, 'The Special One' is famous for his defensive masterclasses, tactical discipline, and winning titles in four different leagues.",
+  "style": "Mourinho focuses on absolute defensive organization, compact low blocks, and lethal fast transition attacks. He prioritizes structural safety, letting the opponent have the ball while closing all spaces, then exploiting turnovers.",
+  "clubsManaged": [
+    {
+      "name": "Porto",
+      "years": "2002-2004"
+    },
+    {
+      "name": "Chelsea",
+      "years": "2004-2007, 2013-2015"
+    },
+    {
+      "name": "Inter Milan",
+      "years": "2008-2010"
+    },
+    {
+      "name": "Real Madrid",
+      "years": "2010-2013"
+    },
+    {
+      "name": "Manchester United",
+      "years": "2016-2018"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Win %",
+      "value": "62.8%"
+    },
+    {
+      "label": "Matches",
+      "value": "1100+"
+    },
+    {
+      "label": "UCL Titles",
+      "value": "2"
+    },
+    {
+      "label": "Major Cups",
+      "value": "26"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2004",
+      "title": "Porto UCL Miracle",
+      "description": "Led underdog Porto to win the UEFA Champions League, earning international acclaim."
+    },
+    {
+      "year": "2005",
+      "title": "Chelsea Premier League Title",
+      "description": "Won the Premier League in his first season, conceding a record-low 15 goals."
+    },
+    {
+      "year": "2010",
+      "title": "Inter Milan Treble",
+      "description": "Won Serie A, Coppa Italia, and UCL, defeating Bayern Munich in the final."
+    },
+    {
+      "year": "2012",
+      "title": "Real Madrid La Liga Title",
+      "description": "Broke the La Liga points (100) and goals (121) records to defeat Guardiola's Barca."
+    },
+    {
+      "year": "2022",
+      "title": "Roma Conference League Win",
+      "description": "Became the first manager to win all three current UEFA club competitions."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "UEFA Champions League",
+      "count": 2
+    },
+    {
+      "title": "Premier League",
+      "count": 3
+    },
+    {
+      "title": "Serie A",
+      "count": 2
+    },
+    {
+      "title": "La Liga",
+      "count": 1
+    }
+  ]
+}

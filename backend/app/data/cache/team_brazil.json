@@ -1,0 +1,158 @@
+{
+  "name": "Brazil",
+  "slug": "brazil",
+  "flag": "🇧🇷",
+  "active": true,
+  "api_id": 6,
+  "titles": "5× World Cup",
+  "style": "Jogo Bonito / Creative Expression",
+  "bio": "The most successful national team in World Cup history, Brazil is synonymous with 'Jogo Bonito' (The Beautiful Game). A factory of footballing wizards from Pelé to Ronaldinho, Brazil represents the absolute peak of footballing joy.",
+  "tacticalIdentity": "Brazil's footballing identity is built on samba-like rhythm, individual expression, fluid wingplay, and attacking fullbacks. It focuses on numerical overloads, high technical skills, and encouraging players to take creative risks in 1v1 situations.",
+  "squad": [
+    {
+      "name": "Pelé",
+      "position": "Forward",
+      "role": "Legendary"
+    },
+    {
+      "name": "Ronaldo Nazário",
+      "position": "Striker",
+      "role": "Legendary"
+    },
+    {
+      "name": "Ronaldinho",
+      "position": "Attacking Mid",
+      "role": "Legendary"
+    },
+    {
+      "name": "Neymar Jr",
+      "position": "Forward",
+      "role": "Star"
+    },
+    {
+      "name": "Vinícius Júnior",
+      "position": "Winger",
+      "role": "Modern"
+    },
+    {
+      "name": "Cafu",
+      "position": "Right-Back",
+      "role": "Legendary"
+    }
+  ],
+  "stats": [
+    {
+      "label": "World Cups",
+      "value": "5"
+    },
+    {
+      "label": "Copa Américas",
+      "value": "9"
+    },
+    {
+      "label": "All-Time Goals",
+      "value": "2200+"
+    },
+    {
+      "label": "FIFA Rank",
+      "value": "6th"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "1958",
+      "title": "Pelé Emerges in Sweden",
+      "description": "A 17-year-old Pelé led Brazil to their first World Cup, introducing Jogo Bonito to the world."
+    },
+    {
+      "year": "1970",
+      "title": "The Perfect Team",
+      "description": "Brazil won their third World Cup with what is widely considered the greatest football team ever assembled."
+    },
+    {
+      "year": "1994",
+      "title": "Tetra in USA",
+      "description": "Defeated Italy on penalties after a defensive, structured tournament led by Romário."
+    },
+    {
+      "year": "2002",
+      "title": "Pentacampeão in Asia",
+      "description": "The 'R' trio of Ronaldo, Rivaldo, and Ronaldinho swept the tournament to win Brazil's fifth star."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "FIFA World Cup",
+      "count": 5
+    },
+    {
+      "title": "Copa América",
+      "count": 9
+    },
+    {
+      "title": "FIFA Confederations Cup",
+      "count": 4
+    },
+    {
+      "title": "Olympic Gold Medal",
+      "count": 2
+    }
+  ],
+  "worldCupSquad": [
+    {
+      "number": 1,
+      "name": "Alisson Becker",
+      "position": "Goalkeeper"
+    },
+    {
+      "number": 2,
+      "name": "Éderson Silva",
+      "position": "Midfielder"
+    },
+    {
+      "number": 3,
+      "name": "Gabriel Magalhães",
+      "position": "Defender"
+    },
+    {
+      "number": 4,
+      "name": "Marquinhos",
+      "position": "Defender"
+    },
+    {
+      "number": 5,
+      "name": "Casemiro",
+      "position": "Midfielder"
+    },
+    {
+      "number": 6,
+      "name": "Alex Sandro",
+      "position": "Defender"
+    },
+    {
+      "number": 7,
+      "name": "Vinícius Júnior",
+      "position": "Midfielder"
+    },
+    {
+      "number": 8,
+      "name": "Bruno Guimarães",
+      "position": "Midfielder"
+    },
+    {
+      "number": 9,
+      "name": "Matheus Cunha",
+      "position": "Forward"
+    },
+    {
+      "number": 10,
+      "name": "Neymar",
+      "position": "Forward"
+    },
+    {
+      "number": 13,
+      "name": "Danilo",
+      "position": "Defender"
+    }
+  ]
+}

@@ -1,0 +1,798 @@
+import json
+import os
+
+# Define the static datasets translated to Python dictionaries
+PLAYERS = [
+  {
+    "name": "Lionel Messi",
+    "slug": "lionel-messi",
+    "active": True,
+    "api_id": 154,
+    "position": "Forward / Playmaker",
+    "country": "🇦🇷",
+    "countryName": "Argentina",
+    "bio": "Widely regarded as one of the greatest football players of all time, Messi spent the majority of his professional career at Barcelona, winning a record 8 Ballon d'Or awards and leading Argentina to World Cup glory in 2022.",
+    "style": "Known for his low center of gravity, extraordinary close control dribbling, vision, and prolific finishing. Messi operates as a winger, false 9, or central playmaker, using his acceleration and passing range to dictate play and unlock defenses.",
+    "stats": [
+      { "label": "Goals", "value": "830+" },
+      { "label": "Assists", "value": "360+" },
+      { "label": "Ballon d'Or", "value": "8" },
+      { "label": "App", "value": "1050+" }
+    ],
+    "timeline": [
+      { "year": "2004", "title": "Barcelona Debut", "description": "Made his official first-team debut for FC Barcelona at age 17." },
+      { "year": "2009", "title": "Sextuple & First Ballon d'Or", "description": "Won all six club competitions in a calendar year with Barca, claiming his first Ballon d'Or." },
+      { "year": "2012", "title": "91-Goal Record", "description": "Broke the calendar year goalscoring record, netting 91 goals in all competitions." },
+      { "year": "2021", "title": "Copa América Champion", "description": "Led Argentina to their first major international title in 28 years." },
+      { "year": "2022", "title": "World Cup Victory", "description": "Won the FIFA World Cup in Qatar, claiming the tournament's Golden Ball award." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 1 },
+      { "title": "Copa América", "count": 1 },
+      { "title": "UEFA Champions League", "count": 4 },
+      { "title": "La Liga", "count": 10 }
+    ]
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "slug": "cristiano-ronaldo",
+    "active": True,
+    "api_id": 874,
+    "position": "Forward",
+    "country": "🇵🇹",
+    "countryName": "Portugal",
+    "bio": "An absolute powerhouse of modern football, Ronaldo has won 5 Ballon d'Or awards and holds the records for most goals scored in the Champions League, European Championship, and international football.",
+    "style": "Ronaldo transitioned from a tricky, lightning-fast winger to a physically dominant, elite goalscoring striker. He combines explosive athleticism, aerial ability, and lethal finishing with both feet.",
+    "stats": [
+      { "label": "Goals", "value": "970+" },
+      { "label": "Assists", "value": "240+" },
+      { "label": "Ballon d'Or", "value": "5" },
+      { "label": "App", "value": "1200+" }
+    ],
+    "timeline": [
+      { "year": "2003", "title": "Manchester United Transfer", "description": "Joined Manchester United from Sporting CP, inheriting the iconic #7 shirt." },
+      { "year": "2008", "title": "First Champions League & Ballon d'Or", "description": "Scored in the UCL Final victory and claimed his first Ballon d'Or." },
+      { "year": "2009", "title": "Real Madrid Move", "description": "Joined Real Madrid for a world-record fee, going on to score 450 goals in 438 matches." },
+      { "year": "2016", "title": "Euro 2016 Glory", "description": "Captained Portugal to their first-ever major international trophy in France." },
+      { "year": "2023", "title": "International Goals Record", "description": "Solidified his place as the top international goalscorer of all time." }
+    ],
+    "trophies": [
+      { "title": "UEFA European Championship", "count": 1 },
+      { "title": "UEFA Champions League", "count": 5 },
+      { "title": "Premier League", "count": 3 },
+      { "title": "La Liga", "count": 2 }
+    ]
+  },
+  {
+    "name": "Kylian Mbappé",
+    "slug": "kylian-mbappe",
+    "active": True,
+    "api_id": 278,
+    "position": "Forward / Winger",
+    "country": "🇫🇷",
+    "countryName": "France",
+    "bio": "One of the most exciting talents of his generation, Mbappé burst onto the scene as a teenager and won the FIFA World Cup in 2018, scoring in the final at age 19.",
+    "style": "Possesses devastating pace, quick dribbling, and lethal composure in 1v1 situations. Mbappé thrives on exploiting high defensive lines, cutting inside from the left wing to curl shots into the far corner.",
+    "stats": [
+      { "label": "Goals", "value": "330+" },
+      { "label": "Assists", "value": "150+" },
+      { "label": "World Cup Goals", "value": "12" },
+      { "label": "App", "value": "440+" }
+    ],
+    "timeline": [
+      { "year": "2016", "title": "Monaco Breakthrough", "description": "Helped Monaco win the Ligue 1 title and reach the Champions League semi-finals." },
+      { "year": "2017", "title": "Paris Saint-Germain Transfer", "description": "Joined PSG in a historic deal, becoming the club's all-time record goalscorer." },
+      { "year": "2018", "title": "World Cup Triumph", "description": "Won the World Cup with France, claiming the Best Young Player award." },
+      { "year": "2022", "title": "World Cup Final Hat-Trick", "description": "Scored a historic hat-trick in the World Cup Final, winning the Golden Boot." },
+      { "year": "2024", "title": "Real Madrid Signing", "description": "Completed his highly-anticipated transfer to Real Madrid." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 1 },
+      { "title": "Ligue 1", "count": 7 },
+      { "title": "UEFA Nations League", "count": 1 },
+      { "title": "Coupe de France", "count": 4 }
+    ]
+  },
+  {
+    "name": "Pelé",
+    "slug": "pele",
+    "active": False,
+    "api_id": 0,
+    "position": "Forward / Attacking Mid",
+    "country": "🇧🇷",
+    "countryName": "Brazil",
+    "bio": "Edson Arantes do Nascimento, known globally as Pelé, is widely considered the king of football. He remains the only player in history to win three FIFA World Cups.",
+    "style": "An athletic and complete forward who could shoot with both feet, head the ball with power, and execute breathtaking dribbles. Pelé's vision, playmaking abilities, and clinical scoring revolutionized the game.",
+    "stats": [
+      { "label": "Goals", "value": "1281" },
+      { "label": "Assists", "value": "350+" },
+      { "label": "World Cups", "value": "3" },
+      { "label": "App", "value": "1363" }
+    ],
+    "timeline": [
+      { "year": "1956", "title": "Santos FC Debut", "description": "Made his debut for Santos at age 15, scoring in his first match." },
+      { "year": "1958", "title": "First World Cup at 17", "description": "Became the youngest player to win the World Cup, scoring twice in the final." },
+      { "year": "1962", "title": "Second World Cup Win", "description": "Won back-to-back titles with Brazil, establishing them as global giants." },
+      { "year": "1970", "title": "Legendary 1970 Campaign", "description": "Led what is considered the greatest team in history to win his third World Cup." },
+      { "year": "1975", "title": "New York Cosmos Move", "description": "Joined the NASL to popularize football in the United States." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 3 },
+      { "title": "Copa Libertadores", "count": 2 },
+      { "title": "Campeonato Paulista", "count": 10 },
+      { "title": "Intercontinental Cup", "count": 2 }
+    ]
+  },
+  {
+    "name": "Andrés Iniesta",
+    "slug": "andres-iniesta",
+    "active": False,
+    "api_id": 0,
+    "position": "Central Midfielder",
+    "country": "🇪🇸",
+    "countryName": "Spain",
+    "bio": "The midfield maestro who scored the winning goal in the 2010 World Cup Final. Iniesta was the central heartbeat of Barcelona and Spain's golden eras of dominant possession football.",
+    "style": "An elegant, agile playmaker whose trademark move was 'La Croqueta'. He excelled in tight spaces, possessing unmatched balance, spatial awareness, and passing accuracy to control the midfield tempo.",
+    "stats": [
+      { "label": "Goals", "value": "90+" },
+      { "label": "Assists", "value": "160+" },
+      { "label": "UCL Titles", "value": "4" },
+      { "label": "App", "value": "950+" }
+    ],
+    "timeline": [
+      { "year": "2002", "title": "Barcelona Debut", "description": "Rose through La Masia to make his first-team debut under Louis van Gaal." },
+      { "year": "2008", "title": "Euro 2008 Champions", "description": "Named in the Team of the Tournament as Spain won the European Championship." },
+      { "year": "2009", "title": "Iniestazo at Stamford Bridge", "description": "Scored a legendary last-minute goal against Chelsea to send Barca to the UCL Final." },
+      { "year": "2010", "title": "World Cup Winning Goal", "description": "Scored the historic 116th-minute winner against the Netherlands in South Africa." },
+      { "year": "2012", "title": "Euro 2012 Best Player", "description": "Won the UEFA Best Player in Europe award after leading Spain to back-to-back Euros." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 1 },
+      { "title": "UEFA European Championship", "count": 2 },
+      { "title": "UEFA Champions League", "count": 4 },
+      { "title": "La Liga", "count": 9 }
+    ]
+  },
+  {
+    "name": "Franz Beckenbauer",
+    "slug": "franz-beckenbauer",
+    "active": False,
+    "api_id": 0,
+    "position": "Libero / Sweeper",
+    "country": "🇩🇪",
+    "countryName": "Germany",
+    "bio": "Nicknamed 'Der Kaiser' (The Emperor), Beckenbauer is credited with inventing the modern 'Libero' (sweeper) role. He won the World Cup as both a captain and a manager.",
+    "style": "Commanding, elegant, and tactically supreme. Beckenbauer would drop behind the defense to clean up play, then carry the ball forward with grace to join the midfield, launching attacks from deep.",
+    "stats": [
+      { "label": "Goals", "value": "110+" },
+      { "label": "Ballon d'Or", "value": "2" },
+      { "label": "Bundesliga", "value": "5" },
+      { "label": "App", "value": "850+" }
+    ],
+    "timeline": [
+      { "year": "1964", "title": "Bayern Munich Debut", "description": "Made his debut for Bayern Munich, transforming them into a European superpower." },
+      { "year": "1972", "title": "Ballon d'Or & Euro 72", "description": "Captained West Germany to Euro glory and won his first Ballon d'Or." },
+      { "year": "1974", "title": "World Cup Captain", "description": "Led West Germany to lift the World Cup on home soil, defeating Cruyff's Netherlands." },
+      { "year": "1976", "title": "UCL Three-Peat", "description": "Captained Bayern Munich to their third consecutive European Cup title." },
+      { "year": "1990", "title": "World Cup Winner as Manager", "description": "Managed West Germany to a World Cup victory in Italy, joining a rare elite club." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup (Player)", "count": 1 },
+      { "title": "FIFA World Cup (Manager)", "count": 1 },
+      { "title": "UEFA European Championship", "count": 1 },
+      { "title": "European Cup (UCL)", "count": 3 }
+    ]
+  },
+  {
+    "name": "Diego Maradona",
+    "slug": "diego-maradona",
+    "active": False,
+    "api_id": 0,
+    "position": "Attacking Midfielder",
+    "country": "🇦🇷",
+    "countryName": "Argentina",
+    "bio": "One of the most iconic figures in sports history, Maradona was a footballing genius who single-handedly inspired Argentina to the 1986 World Cup and transformed Napoli into Serie A champions.",
+    "style": "A master dribbler with magical footwork, balance, and crossing ability. Maradona used his legendary left foot to execute free kicks, defense-splitting passes, and solo runs that defined a generation.",
+    "stats": [
+      { "label": "Goals", "value": "340+" },
+      { "label": "Assists", "value": "200+" },
+      { "label": "World Cup Golden Ball", "value": "1" },
+      { "label": "App", "value": "680+" }
+    ],
+    "timeline": [
+      { "year": "1976", "title": "Professional Debut at 15", "description": "Debuted for Argentinos Juniors, becoming the youngest player in league history." },
+      { "year": "1982", "title": "Barcelona Transfer", "description": "Joined Barcelona for a world-record fee, winning the Copa del Rey." },
+      { "year": "1984", "title": "Napoli Revolution", "description": "Transferred to Napoli, leading them to their only two Serie A titles in history (1987, 1990)." },
+      { "year": "1986", "title": "The Goal of the Century", "description": "Scored the famous 'Hand of God' and the 60-meter solo 'Goal of the Century' against England." },
+      { "year": "1990", "title": "World Cup Runner-up", "description": "Led Argentina to a second consecutive World Cup Final, falling to West Germany." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 1 },
+      { "title": "Serie A", "count": 2 },
+      { "title": "UEFA Cup", "count": 1 },
+      { "title": "Copa del Rey", "count": 1 }
+    ]
+  },
+  {
+    "name": "Zinedine Zidane",
+    "slug": "zinedine-zidane",
+    "active": False,
+    "api_id": 0,
+    "position": "Attacking Midfielder",
+    "country": "🇫🇷",
+    "countryName": "France",
+    "bio": "An icon of elegance and big-match performance, Zidane scored twice in the 1998 World Cup Final and went on to win three Champions League titles in a row as the manager of Real Madrid.",
+    "style": "Zidane was characterized by his ball control, body feints, vision, and technical precision. He possessed the rare ability to make complex movements look completely effortless.",
+    "stats": [
+      { "label": "Goals", "value": "150+" },
+      { "label": "Assists", "value": "130+" },
+      { "label": "Ballon d'Or", "value": "1" },
+      { "label": "App", "value": "800+" }
+    ],
+    "timeline": [
+      { "year": "1996", "title": "Juventus Move", "description": "Joined Juventus from Bordeaux, winning back-to-back Serie A titles." },
+      { "year": "1998", "title": "World Cup & Ballon d'Or", "description": "Scored two headers in the final against Brazil to win the World Cup, claiming the Ballon d'Or." },
+      { "year": "2001", "title": "Galáctico Transfer", "description": "Joined Real Madrid for a world-record transfer fee." },
+      { "year": "2002", "title": "Legendary UCL Volley", "description": "Scored one of the greatest goals in history—a left-foot volley in the UCL Final." },
+      { "year": "2006", "title": "World Cup Final & Retirement", "description": "Led France to the final, winning the Golden Ball before retiring from professional play." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 1 },
+      { "title": "UEFA European Championship", "count": 1 },
+      { "title": "UEFA Champions League (Player)", "count": 1 },
+      { "title": "UEFA Champions League (Manager)", "count": 3 }
+    ]
+  }
+]
+
+COACHES = [
+  {
+    "name": "Pep Guardiola",
+    "slug": "pep-guardiola",
+    "active": True,
+    "api_id": 4,
+    "philosophy": "Positional Play",
+    "club": "Manchester City",
+    "emoji": "🧠",
+    "country": "🇪🇸",
+    "countryName": "Spain",
+    "bio": "Famous for his obsessive tactical perfectionism and high-possession style, Guardiola revolutionized modern football at Barcelona, Bayern Munich, and Manchester City.",
+    "style": "Guardiola is the leading advocate of 'Juego de Posición' (Positional Play). His teams utilize short passes, extreme high press, building out from the goalkeeper, and using inverted fullbacks or defenders stepping into midfield to create central overloads.",
+    "clubsManaged": [
+      { "name": "Barcelona B", "years": "2007-2008" },
+      { "name": "Barcelona", "years": "2008-2012" },
+      { "name": "Bayern Munich", "years": "2013-2016" },
+      { "name": "Manchester City", "years": "2016-Present" }
+    ],
+    "stats": [
+      { "label": "Win %", "value": "72.5%" },
+      { "label": "Matches", "value": "900+" },
+      { "label": "UCL Titles", "value": "3" },
+      { "label": "League Titles", "value": "12" }
+    ],
+    "timeline": [
+      { "year": "2008", "title": "Barcelona Appointment", "description": "Promoted to first-team manager, shifting the squad towards a possession-heavy style." },
+      { "year": "2009", "title": "Historic Sextuple", "description": "Won all six available club trophies in his debut season, a football first." },
+      { "year": "2013", "title": "Bayern Munich Project", "description": "Brought his possession style to Germany, winning three Bundesliga titles in a row." },
+      { "year": "2017", "title": "Centurions Season", "description": "Led Manchester City to a record-breaking 100 points in the Premier League." },
+      { "year": "2023", "title": "Treble Victory", "description": "Won the Champions League, Premier League, and FA Cup in a historic campaign." }
+    ],
+    "trophies": [
+      { "title": "UEFA Champions League", "count": 3 },
+      { "title": "Premier League", "count": 6 },
+      { "title": "La Liga", "count": 3 },
+      { "title": "Bundesliga", "count": 3 }
+    ]
+  },
+  {
+    "name": "José Mourinho",
+    "slug": "jose-mourinho",
+    "active": True,
+    "api_id": 2462,
+    "philosophy": "Pragmatic Defense & Transitions",
+    "club": "Fenerbahce",
+    "emoji": "🛡️",
+    "country": "🇵🇹",
+    "countryName": "Portugal",
+    "bio": "One of the most successful and controversial managers in history, 'The Special One' is famous for his defensive masterclasses, tactical discipline, and winning titles in four different leagues.",
+    "style": "Mourinho focuses on absolute defensive organization, compact low blocks, and lethal fast transition attacks. He prioritizes structural safety, letting the opponent have the ball while closing all spaces, then exploiting turnovers.",
+    "clubsManaged": [
+      { "name": "Porto", "years": "2002-2004" },
+      { "name": "Chelsea", "years": "2004-2007, 2013-2015" },
+      { "name": "Inter Milan", "years": "2008-2010" },
+      { "name": "Real Madrid", "years": "2010-2013" },
+      { "name": "Manchester United", "years": "2016-2018" }
+    ],
+    "stats": [
+      { "label": "Win %", "value": "62.8%" },
+      { "label": "Matches", "value": "1100+" },
+      { "label": "UCL Titles", "value": "2" },
+      { "label": "Major Cups", "value": "26" }
+    ],
+    "timeline": [
+      { "year": "2004", "title": "Porto UCL Miracle", "description": "Led underdog Porto to win the UEFA Champions League, earning international acclaim." },
+      { "year": "2005", "title": "Chelsea Premier League Title", "description": "Won the Premier League in his first season, conceding a record-low 15 goals." },
+      { "year": "2010", "title": "Inter Milan Treble", "description": "Won Serie A, Coppa Italia, and UCL, defeating Bayern Munich in the final." },
+      { "year": "2012", "title": "Real Madrid La Liga Title", "description": "Broke the La Liga points (100) and goals (121) records to defeat Guardiola's Barca." },
+      { "year": "2022", "title": "Roma Conference League Win", "description": "Became the first manager to win all three current UEFA club competitions." }
+    ],
+    "trophies": [
+      { "title": "UEFA Champions League", "count": 2 },
+      { "title": "Premier League", "count": 3 },
+      { "title": "Serie A", "count": 2 },
+      { "title": "La Liga", "count": 1 }
+    ]
+  },
+  {
+    "name": "Jürgen Klopp",
+    "slug": "jurgen-klopp",
+    "active": True,
+    "api_id": 1,
+    "philosophy": "Gegenpressing / Heavy Metal Football",
+    "club": "Multiple",
+    "emoji": "⚡",
+    "country": "🇩🇪",
+    "countryName": "Germany",
+    "bio": "Known for his charismatic leadership and explosive, fast-tempo football, Klopp resurrected Borussia Dortmund and Liverpool, guiding them to domestic and European glory.",
+    "style": "Klopp operates under the 'Heavy Metal Football' style, utilizing high-intensity Gegenpressing (counter-pressing). His teams immediately press the ball upon losing possession, looking to create quick vertical attack transitions.",
+    "clubsManaged": [
+      { "name": "Mainz 05", "years": "2001-2008" },
+      { "name": "Borussia Dortmund", "years": "2008-2015" },
+      { "name": "Liverpool", "years": "2015-2024" }
+    ],
+    "stats": [
+      { "label": "Win %", "value": "61.2%" },
+      { "label": "Matches", "value": "1000+" },
+      { "label": "UCL Titles", "value": "1" },
+      { "label": "League Titles", "value": "3" }
+    ],
+    "timeline": [
+      { "year": "2004", "title": "Mainz Bundesliga Promotion", "description": "Guided Mainz to the Bundesliga for the first time in their history." },
+      { "year": "2011", "title": "Dortmund Bundesliga Champion", "description": "Won the Bundesliga title with an energetic, young squad, repeating in 2012." },
+      { "year": "2019", "title": "Champions League Winner", "description": "Won Liverpool's sixth European Cup, defeating Tottenham in the Madrid final." },
+      { "year": "2020", "title": "Premier League Champion", "description": "Led Liverpool to their first league title in 30 years with 99 points." },
+      { "year": "2024", "title": "Liverpool Farewell", "description": "Concluded his legendary tenure at Anfield, winning the EFL Cup in his final season." }
+    ],
+    "trophies": [
+      { "title": "UEFA Champions League", "count": 1 },
+      { "title": "Premier League", "count": 1 },
+      { "title": "Bundesliga", "count": 2 },
+      { "title": "FA Cup", "count": 1 }
+    ]
+  },
+  {
+    "name": "Arsène Wenger",
+    "slug": "arsene-wenger",
+    "active": False,
+    "api_id": 0,
+    "philosophy": "Fluid Possession & Attacking Freedom",
+    "club": "Arsenal",
+    "emoji": "👔",
+    "country": "🇫🇷",
+    "countryName": "France",
+    "bio": "Nicknamed 'Le Professeur', Wenger spent 22 years at Arsenal, introducing innovative training methods, nutrition, and scouting to English football.",
+    "style": "Wenger advocated for fluid, free-flowing, attacking football with creative players rotating positions. He trusted in technical mastery, intelligent off-the-ball movements, and fast combination passes.",
+    "clubsManaged": [
+      { "name": "Nancy", "years": "1984-1987" },
+      { "name": "Monaco", "years": "1987-1994" },
+      { "name": "Nagoya Grampus", "years": "1995-1996" },
+      { "name": "Arsenal", "years": "1996-2018" }
+    ],
+    "stats": [
+      { "label": "Win %", "value": "57.2%" },
+      { "label": "Matches", "value": "1700+" },
+      { "label": "Invincible Leagues", "value": "1" },
+      { "label": "FA Cups", "value": "7" }
+    ],
+    "timeline": [
+      { "year": "1988", "title": "Monaco Ligue 1 Champion", "description": "Won the French league title in his debut season with Monaco." },
+      { "year": "1996", "title": "Arsenal Appointment", "description": "Joined Arsenal as a relatively unknown French manager, quickly transforming the club." },
+      { "year": "1998", "title": "First Premier League Double", "description": "Won the Premier League and FA Cup double in his first full season." },
+      { "year": "2004", "title": "The Invincibles", "description": "Achieved the legendary unbeaten Premier League season (26 wins, 12 draws)." },
+      { "year": "2018", "title": "Arsenal Retirement", "description": "Concluded his historic 22-year reign at Arsenal as their most successful manager." }
+    ],
+    "trophies": [
+      { "title": "Premier League", "count": 3 },
+      { "title": "FA Cup", "count": 7 },
+      { "title": "Ligue 1", "count": 1 },
+      { "title": "Coupe de France", "count": 1 }
+    ]
+  },
+  {
+    "name": "Diego Simeone",
+    "slug": "diego-simeone",
+    "active": True,
+    "api_id": 1595,
+    "philosophy": "Cholismo / Intense Defensive Block",
+    "club": "Atletico Madrid",
+    "emoji": "🦁",
+    "country": "🇦🇷",
+    "countryName": "Argentina",
+    "bio": "Famous for his intense touchline energy, Diego 'El Cholo' Simeone broke the Barcelona-Real Madrid duopoly in Spain, transforming Atletico Madrid into a defensive juggernaut.",
+    "style": "Simeone's philosophy ('Cholismo') relies on a compact, disciplined 4-4-2 low/mid block, extreme aggression, defensive solidarity, and vertical counter-attacks. He treats tactical discipline and team unity as paramount.",
+    "clubsManaged": [
+      { "name": "Racing Club", "years": "2006, 2011" },
+      { "name": "Estudiantes", "years": "2006-2007" },
+      { "name": "River Plate", "years": "2007-2008" },
+      { "name": "San Lorenzo", "years": "2009-2010" },
+      { "name": "Atletico Madrid", "years": "2011-Present" }
+    ],
+    "stats": [
+      { "label": "Win %", "value": "59.0%" },
+      { "label": "Matches", "value": "680+" },
+      { "label": "Europa Leagues", "value": "2" },
+      { "label": "La Liga Titles", "value": "2" }
+    ],
+    "timeline": [
+      { "year": "2011", "title": "Atletico Madrid Appointment", "description": "Took over a struggling Atletico team, immediately instilling defensive discipline." },
+      { "year": "2012", "title": "Europa League Success", "description": "Won the UEFA Europa League in his first half-season, defeating Athletic Bilbao." },
+      { "year": "2014", "title": "La Liga Champions", "description": "Broke the Real-Barca duopoly, winning the league and reaching the UCL Final." },
+      { "year": "2018", "title": "Second Europa League", "description": "Won his second Europa League title with a 3-0 victory over Marseille." },
+      { "year": "2021", "title": "Second La Liga Triumph", "description": "Won his second La Liga title, adapting the team into a flexible defensive system." }
+    ],
+    "trophies": [
+      { "title": "La Liga", "count": 2 },
+      { "title": "UEFA Europa League", "count": 2 },
+      { "title": "Copa del Rey", "count": 1 },
+      { "title": "UEFA Super Cup", "count": 2 }
+    ]
+  },
+  {
+    "name": "Luiz Felipe Scolari",
+    "slug": "luiz-felipe-scolari",
+    "active": False,
+    "api_id": 0,
+    "philosophy": "Familia Scolari / Pragmatic Attacking",
+    "club": "Palmeiras / Brazil",
+    "emoji": "🇧🇷",
+    "country": "🇧🇷",
+    "countryName": "Brazil",
+    "bio": "Nicknamed 'Big Phil', Scolari is a legendary Brazilian manager who led Brazil to their fifth World Cup title in 2002 and managed teams across Europe, South America, and Asia.",
+    "style": "Scolari emphasizes the 'Familia Scolari' (family bond) to build team spirit. Tactically, he blends solid defensive screens (typically defensive midfielders) with immense individual attacking freedom for creative stars.",
+    "clubsManaged": [
+      { "name": "Gremio", "years": "1987, 1993-1996" },
+      { "name": "Palmeiras", "years": "1997-2000, 2010-2012" },
+      { "name": "Brazil National Team", "years": "2001-2002, 2012-2014" },
+      { "name": "Portugal National Team", "years": "2003-2008" },
+      { "name": "Chelsea", "years": "2008-2009" }
+    ],
+    "stats": [
+      { "label": "World Cups", "value": "1" },
+      { "label": "Copa Lib", "value": "2" },
+      { "label": "Matches", "value": "1200+" },
+      { "label": "Win %", "value": "56.4%" }
+    ],
+    "timeline": [
+      { "year": "1995", "title": "Copa Libertadores Winner", "description": "Won the South American championship with Gremio, repeating in 1999 with Palmeiras." },
+      { "year": "2002", "title": "World Cup Glory", "description": "Led Brazil's iconic team to win all 7 matches in South Korea/Japan, claiming their 5th World Cup." },
+      { "year": "2004", "title": "Euro 2004 Runner-up", "description": "Managed Portugal to the final of Euro 2004, losing narrowly to Greece." },
+      { "year": "2006", "title": "World Cup 4th Place", "description": "Led Portugal to their best World Cup finish in 40 years, reaching the semi-finals." },
+      { "year": "2013", "title": "Confederations Cup Win", "description": "Returned to Brazil, defeating Spain 3-0 in the final." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 1 },
+      { "title": "Copa Libertadores", "count": 2 },
+      { "title": "Brazilian Serie A", "count": 2 },
+      { "title": "Copa do Brasil", "count": 4 }
+    ]
+  }
+]
+
+TEAMS = [
+  {
+    "name": "Argentina",
+    "slug": "argentina",
+    "flag": "🇦🇷",
+    "active": True,
+    "api_id": 26,
+    "titles": "3× World Cup",
+    "style": "La Nuestra / Flair & Passion",
+    "bio": "Argentina has a rich footballing history defined by passion, supreme individual talent, and tactical innovation. The home of Diego Maradona and Lionel Messi, La Albiceleste has captured the world's imagination for generations.",
+    "tacticalIdentity": "Historically, Argentine football revolves around 'La Nuestra'—a style emphasizing high technical skill, dribbling, and creativity. Modern systems blend this traditional flair with aggressive counter-pressing and structured defensive support to liberate their creative playmakers.",
+    "squad": [
+      { "name": "Lionel Messi", "position": "Forward", "role": "Star" },
+      { "name": "Diego Maradona", "position": "Attacking Mid", "role": "Legendary" },
+      { "name": "Mario Kempes", "position": "Striker", "role": "Legendary" },
+      { "name": "Angel Di Maria", "position": "Winger", "role": "Modern" },
+      { "name": "Emiliano Martínez", "position": "Goalkeeper", "role": "Modern" },
+      { "name": "Javier Zanetti", "position": "Full-Back", "role": "Legendary" }
+    ],
+    "stats": [
+      { "label": "World Cups", "value": "3" },
+      { "label": "Copa Américas", "value": "15" },
+      { "label": "FIFA Rank", "value": "1st" },
+      { "label": "Matches", "value": "1000+" }
+    ],
+    "timeline": [
+      { "year": "1978", "title": "First World Cup Title", "description": "Won the tournament on home soil, led by top scorer Mario Kempes." },
+      { "year": "1986", "title": "Maradona's Masterpiece", "description": "Diego Maradona captained Argentina to a second World Cup in Mexico with legendary performances." },
+      { "year": "2021", "title": "Copa América Triumph", "description": "Defeated Brazil in Rio to end a 28-year senior international trophy drought." },
+      { "year": "2022", "title": "Third Star in Qatar", "description": "Lionel Messi led La Albiceleste to World Cup glory in one of the greatest finals ever played." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 3 },
+      { "title": "Copa América", "count": 15 },
+      { "title": "FIFA Confederations Cup", "count": 1 },
+      { "title": "CONMEBOL-UEFA Cup of Champions", "count": 2 }
+    ],
+    "worldCupSquad": [
+      { "number": 23, "name": "Emiliano Martínez", "position": "Goalkeeper" },
+      { "number": 4, "name": "Gonzalo Montiel", "position": "Right Back" },
+      { "number": 13, "name": "Cristian Romero", "position": "Right Central Defender" },
+      { "number": 6, "name": "Lisandro Martinez", "position": "Left Central Defender" },
+      { "number": 25, "name": "Facundo Medina", "position": "Left Back" },
+      { "number": 7, "name": "Rodrigo De Paul", "position": "Right Midfielder" },
+      { "number": 20, "name": "Alexis Mac Allister", "position": "Central Midfielder" },
+      { "number": 24, "name": "Enzo Fernandez", "position": "Central Midfielder" },
+      { "number": 16, "name": "Thiago Almada", "position": "Left Midfielder" },
+      { "number": 22, "name": "Lautaro Martinez", "position": "Forward" },
+      { "number": 10, "name": "Lionel Messi", "position": "Forward" }
+    ]
+  },
+  {
+    "name": "Brazil",
+    "slug": "brazil",
+    "flag": "🇧🇷",
+    "active": True,
+    "api_id": 6,
+    "titles": "5× World Cup",
+    "style": "Jogo Bonito / Creative Expression",
+    "bio": "The most successful national team in World Cup history, Brazil is synonymous with 'Jogo Bonito' (The Beautiful Game). A factory of footballing wizards from Pelé to Ronaldinho, Brazil represents the absolute peak of footballing joy.",
+    "tacticalIdentity": "Brazil's footballing identity is built on samba-like rhythm, individual expression, fluid wingplay, and attacking fullbacks. It focuses on numerical overloads, high technical skills, and encouraging players to take creative risks in 1v1 situations.",
+    "squad": [
+      { "name": "Pelé", "position": "Forward", "role": "Legendary" },
+      { "name": "Ronaldo Nazário", "position": "Striker", "role": "Legendary" },
+      { "name": "Ronaldinho", "position": "Attacking Mid", "role": "Legendary" },
+      { "name": "Neymar Jr", "position": "Forward", "role": "Star" },
+      { "name": "Vinícius Júnior", "position": "Winger", "role": "Modern" },
+      { "name": "Cafu", "position": "Right-Back", "role": "Legendary" }
+    ],
+    "stats": [
+      { "label": "World Cups", "value": "5" },
+      { "label": "Copa Américas", "value": "9" },
+      { "label": "All-Time Goals", "value": "2200+" },
+      { "label": "FIFA Rank", "value": "6th" }
+    ],
+    "timeline": [
+      { "year": "1958", "title": "Pelé Emerges in Sweden", "description": "A 17-year-old Pelé led Brazil to their first World Cup, introducing Jogo Bonito to the world." },
+      { "year": "1970", "title": "The Perfect Team", "description": "Brazil won their third World Cup with what is widely considered the greatest football team ever assembled." },
+      { "year": "1994", "title": "Tetra in USA", "description": "Defeated Italy on penalties after a defensive, structured tournament led by Romário." },
+      { "year": "2002", "title": "Pentacampeão in Asia", "description": "The 'R' trio of Ronaldo, Rivaldo, and Ronaldinho swept the tournament to win Brazil's fifth star." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 5 },
+      { "title": "Copa América", "count": 9 },
+      { "title": "FIFA Confederations Cup", "count": 4 },
+      { "title": "Olympic Gold Medal", "count": 2 }
+    ],
+    "worldCupSquad": [
+      { "number": 1, "name": "Allison", "position": "Goalkeeper" },
+      { "number": 13, "name": "Danilo", "position": "Right Back" },
+      { "number": 4, "name": "Marquinhos", "position": "Right Central Defender" },
+      { "number": 3, "name": "Gabriel Magalhaes", "position": "Left Central Defender" },
+      { "number": 16, "name": "Douglas Santos", "position": "Left Back" },
+      { "number": 8, "name": "Bruno Guimaraes", "position": "Central Midfielder" },
+      { "number": 5, "name": "Casemiro", "position": "Central Midfielder" },
+      { "number": 20, "name": "Lucas Paqueta", "position": "Central Midfielder" },
+      { "number": 11, "name": "Raphinha", "position": "Right Winger" },
+      { "number": 7, "name": "Vinicius Junior", "position": "Left Winger" },
+      { "number": 9, "name": "Matheus Cunha", "position": "Forward" }
+    ]
+  },
+  {
+    "name": "France",
+    "slug": "france",
+    "flag": "🇫🇷",
+    "active": True,
+    "api_id": 2,
+    "titles": "2× World Cup",
+    "style": "Pragmatism & Lightning Transitions",
+    "bio": "France (Les Bleus) has risen to become a dominant powerhouse of modern football. Blessed with incredible multi-cultural diversity and world-class academies, France blends physical dominance with supreme technical elegance.",
+    "tacticalIdentity": "Under Didier Deschamps, France focuses on a highly organized defensive shape, minimizing risk in possession, and utilizing lightning-fast counter-attacks through explosive wingers like Kylian Mbappé.",
+    "squad": [
+      { "name": "Zinedine Zidane", "position": "Attacking Mid", "role": "Legendary" },
+      { "name": "Kylian Mbappé", "position": "Forward", "role": "Star" },
+      { "name": "Thierry Henry", "position": "Striker", "role": "Legendary" },
+      { "name": "Antoine Griezmann", "position": "Midfielder / Forward", "role": "Modern" },
+      { "name": "Michel Platini", "position": "Playmaker", "role": "Legendary" },
+      { "name": "N'Golo Kanté", "position": "Defensive Mid", "role": "Modern" }
+    ],
+    "stats": [
+      { "label": "World Cups", "value": "2" },
+      { "label": "Euros", "value": "2" },
+      { "label": "FIFA Rank", "value": "3rd" },
+      { "label": "UCL Winners", "value": "Many" }
+    ],
+    "timeline": [
+      { "year": "1984", "title": "Platini's Euro Domination", "description": "Michel Platini scored a record 9 goals in 5 games to secure France's first European Championship." },
+      { "year": "1998", "title": "First World Cup Star", "description": "Zidane scored twice in Paris as the host nation defeated Brazil 3-0 in the final." },
+      { "year": "2000", "title": "Double Champions", "description": "Won Euro 2000 with a golden goal from David Trezeguet, completing a rare double." },
+      { "year": "2018", "title": "Glory in Russia", "description": "A young, explosive French team defeated Croatia 4-2 in Moscow to claim their second World Cup." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 2 },
+      { "title": "UEFA European Championship", "count": 2 },
+      { "title": "FIFA Confederations Cup", "count": 2 },
+      { "title": "UEFA Nations League", "count": 1 }
+    ],
+    "worldCupSquad": [
+      { "number": 16, "name": "Mike Maignan", "position": "Goalkeeper" },
+      { "number": 5, "name": "Jules Kounde", "position": "Right Back" },
+      { "number": 4, "name": "Dayot Upamecano", "position": "Right Central Defender" },
+      { "number": 17, "name": "William Saliba", "position": "Left Central Defender" },
+      { "number": 19, "name": "Theo Hernandez", "position": "Left Back" },
+      { "number": 8, "name": "Aurelien Tchouameni", "position": "Defensive Midfielder" },
+      { "number": 14, "name": "Adrien Rabiot", "position": "Defensive Midfielder" },
+      { "number": 11, "name": "Michael Olise", "position": "Attacking Midfielder" },
+      { "number": 7, "name": "Ousmane Dembele", "position": "Attacking Midfielder" },
+      { "number": 20, "name": "Desire Doue", "position": "Attacking Midfielder" },
+      { "number": 10, "name": "Kylian Mbaape", "position": "Forward" }
+    ]
+  },
+  {
+    "name": "Germany",
+    "slug": "germany",
+    "flag": "🇩🇪",
+    "active": True,
+    "api_id": 25,
+    "titles": "4× World Cup",
+    "style": "Raumdeuter / Positional Efficiency",
+    "bio": "Germany (Die Mannschaft) is the epitome of tournament resilience, tactical intelligence, and collective strength. Always competing at the business end of tournaments, German football blends robust physical structure with modern positional play.",
+    "tacticalIdentity": "German football has transitioned from powerful physical efficiency to dynamic positional play. Their style emphasizes occupying half-spaces, high pressing, and intelligent player movement (like the 'Raumdeuter' or space investigator).",
+    "squad": [
+      { "name": "Franz Beckenbauer", "position": "Defender / Sweeper", "role": "Legendary" },
+      { "name": "Gerd Müller", "position": "Striker", "role": "Legendary" },
+      { "name": "Lothar Matthäus", "position": "Midfielder", "role": "Legendary" },
+      { "name": "Thomas Müller", "position": "Raumdeuter", "role": "Modern" },
+      { "name": "Manuel Neuer", "position": "Sweeper-Keeper", "role": "Star" },
+      { "name": "Toni Kroos", "position": "Midfielder", "role": "Modern" }
+    ],
+    "stats": [
+      { "label": "World Cups", "value": "4" },
+      { "label": "Euros", "value": "3" },
+      { "label": "FIFA Rank", "value": "10th" },
+      { "label": "WC Finals", "value": "8" }
+    ],
+    "timeline": [
+      { "year": "1954", "title": "The Miracle of Bern", "description": "Dealt the legendary Hungarian 'Golden Team' their first defeat in 4 years to win their 1st World Cup." },
+      { "year": "1974", "title": "Beckenbauer's Triumph", "description": "Der Kaiser captained Germany to victory on home soil, defeating Cruyff's Total Football." },
+      { "year": "1990", "title": "Matthäus Captains Unified Germany", "description": "Defeated Maradona's Argentina in Rome just before the formal reunification of Germany." },
+      { "year": "2014", "title": "Historic 7-1 & Fourth Star", "description": "Swept past hosts Brazil 7-1 in the semi-final before Mario Götze's extra-time goal won the final." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 4 },
+      { "title": "UEFA European Championship", "count": 3 },
+      { "title": "FIFA Confederations Cup", "count": 1 }
+    ],
+    "worldCupSquad": [
+      { "number": 1, "name": "Manuel Neuer", "position": "Goalkeeper" },
+      { "number": 6, "name": "Joshua Kimmich", "position": "Right Back" },
+      { "number": 4, "name": "Jonathan Tah", "position": "Right Central Defender" },
+      { "number": 15, "name": "Nico Schlotterbeck", "position": "Left Central Defender" },
+      { "number": 18, "name": "Nathaniel Brown", "position": "Left Back" },
+      { "number": 23, "name": "Felix Nmecha", "position": "Defensive Midfielder" },
+      { "number": 5, "name": "Aleksandar Pavlovic", "position": "Defensive Midfielder" },
+      { "number": 19, "name": "Leroy Sane", "position": "Attacking Midfielder" },
+      { "number": 10, "name": "Jamal Musiala", "position": "Attacking Midfielder" },
+      { "number": 17, "name": "Florian Wirtz", "position": "Attacking Midfielder" },
+      { "number": 7, "name": "Kai Havertz", "position": "Forward" }
+    ]
+  },
+  {
+    "name": "Spain",
+    "slug": "spain",
+    "flag": "🇪🇸",
+    "active": True,
+    "api_id": 9,
+    "titles": "1× World Cup",
+    "style": "Tiki-Taka / Absolute Possession",
+    "bio": "Spain (La Roja) defined an entire era of modern football with 'Tiki-Taka'. Built upon the technical superiority of small, creative midfielders and a commitment to possession, Spain dominated international football from 2008 to 2012.",
+    "tacticalIdentity": "Tiki-Taka focuses on absolute possession, short rapid passing, triangular movements, and constant rotation of midfielders. The philosophy believes that if the opponent doesn't have the ball, they cannot score.",
+    "squad": [
+      { "name": "Andrés Iniesta", "position": "Midfielder", "role": "Legendary" },
+      { "name": "Xavi Hernández", "position": "Midfielder", "role": "Legendary" },
+      { "name": "Sergio Ramos", "position": "Defender", "role": "Legendary" },
+      { "name": "Iker Casillas", "position": "Goalkeeper", "role": "Legendary" },
+      { "name": "Rodri", "position": "Defensive Mid", "role": "Star" },
+      { "name": "Lamine Yamal", "position": "Winger", "role": "Modern" }
+    ],
+    "stats": [
+      { "label": "World Cups", "value": "1" },
+      { "label": "Euros", "value": "4" },
+      { "label": "FIFA Rank", "value": "2nd" },
+      { "label": "Euro 2024", "value": "Winners" }
+    ],
+    "timeline": [
+      { "year": "2008", "title": "Euro 2008 Triumph", "description": "Broke decades of underachievement by defeating Germany in Vienna under Luis Aragonés." },
+      { "year": "2010", "title": "World Cup Glory", "description": "Andrés Iniesta scored the extra-time winner against the Netherlands to claim Spain's first World Cup." },
+      { "year": "2012", "title": "Historic Treble", "description": "Defeated Italy 4-0 in the Euro 2012 final, completing an unprecedented consecutive three major title run." },
+      { "year": "2024", "title": "Euro 2024 Champions", "description": "Won every single game in Germany to win their record-breaking 4th European Championship." }
+    ],
+    "trophies": [
+      { "title": "FIFA World Cup", "count": 1 },
+      { "title": "UEFA European Championship", "count": 4 },
+      { "title": "UEFA Nations League", "count": 1 }
+    ],
+    "worldCupSquad": [
+      { "number": 23, "name": "Unai Simon", "position": "Goalkeeper" },
+      { "number": 5, "name": "Marcos Llorente", "position": "Right Back" },
+      { "number": 22, "name": "Pau Cubarsi", "position": "Right Central Defender" },
+      { "number": 14, "name": "Aymeric Laporte", "position": "Left Central Defender" },
+      { "number": 24, "name": "Marc Cucurella", "position": "Left Back" },
+      { "number": 20, "name": "Pedri", "position": "Central Midfielder" },
+      { "number": 10, "name": "Dani Olmo", "position": "Central Midfielder" },
+      { "number": 16, "name": "Rodri", "position": "Central Midfielder" },
+      { "number": 19, "name": "Lamine Yamal", "position": "Right Winger" },
+      { "number": 17, "name": "Nico Williams", "position": "Left Winger" },
+      { "number": 21, "name": "Mikel Oyarzabal", "position": "Forward" }
+    ]
+  },
+  {
+    "name": "Portugal",
+    "slug": "portugal",
+    "flag": "🇵🇹",
+    "active": True,
+    "api_id": 27,
+    "titles": "1× Euro Championship",
+    "style": "Dynamic Attack & Countering Structure",
+    "bio": "Portugal (Seleção das Quinas) has consistently punched above its weight, developing some of the most gifted wingers and forwards in history, including Eusébio, Luís Figo, and Cristiano Ronaldo.",
+    "tacticalIdentity": "Portuguese football combines solid tactical discipline and defensive blocks with highly explosive, creative attacking transitions. Players focus on technical dribbling, tactical intelligence, and exploiting spaces via quick wing attacks.",
+    "squad": [
+      { "name": "Cristiano Ronaldo", "position": "Forward", "role": "Star" },
+      { "name": "Eusébio", "position": "Striker", "role": "Legendary" },
+      { "name": "Luís Figo", "position": "Winger", "role": "Legendary" },
+      { "name": "Bernardo Silva", "position": "Midfielder / Winger", "role": "Modern" },
+      { "name": "Bruno Fernandes", "position": "Attacking Mid", "role": "Modern" },
+      { "name": "Rui Costa", "position": "Playmaker", "role": "Legendary" }
+    ],
+    "stats": [
+      { "label": "Euros", "value": "1" },
+      { "label": "Nations League", "value": "2" },
+      { "label": "FIFA Rank", "value": "5th" },
+      { "label": "Goals (CR7)", "value": "130+" }
+    ],
+    "timeline": [
+      { "year": "1966", "title": "Eusébio's Bronze Campaign", "description": "Eusébio led Portugal to a third-place finish in their debut World Cup, scoring 9 goals." },
+      { "year": "2004", "title": "Euro 2004 Heartbreak", "description": "Reached the final on home soil but suffered a shock 1-0 defeat to underdogs Greece." },
+      { "year": "2016", "title": "First Major Trophy", "description": "Eder's extra-time goal defeated hosts France in Paris to secure Euro 2016 glory." },
+      { "year": "2019", "title": "Nations League Winners", "description": "Won the inaugural UEFA Nations League tournament on home soil, defeating the Netherlands." }
+    ],
+    "trophies": [
+      { "title": "UEFA European Championship", "count": 1 },
+      { "title": "UEFA Nations League", "count": 1 }
+    ],
+    "worldCupSquad": [
+      { "number": 1, "name": "Diego Costa", "position": "Goalkeeper" },
+      { "number": 20, "name": "Joao Cancelo", "position": "Right Back" },
+      { "number": 14, "name": "Goncalo Inacio", "position": "Right Central Defender" },
+      { "number": 3, "name": "Ruben Dias", "position": "Left Central Defender" },
+      { "number": 25, "name": "Nuno Mendes", "position": "Left Back" },
+      { "number": 23, "name": "Vitinha", "position": "Defensive Midfielder" },
+      { "number": 15, "name": "Joao Neves", "position": "Defensive Midfielder" },
+      { "number": 18, "name": "Pedro Neto", "position": "Attacking Midfielder" },
+      { "number": 10, "name": "Bernardo Silva", "position": "Attacking Midfielder" },
+      { "number": 8, "name": "Bruno Fernandes", "position": "Attacking Midfielder" },
+      { "number": 7, "name": "Cristiano Ronaldo", "position": "Forward" }
+    ]
+  }
+]
+
+def main():
+    # Make sure app/data exists
+    data_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "app", "data")
+    os.makedirs(data_dir, exist_ok=True)
+    
+    profiles = {
+        "players": PLAYERS,
+        "coaches": COACHES,
+        "teams": TEAMS
+    }
+    
+    output_path = os.path.join(data_dir, "profiles_static.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(profiles, f, ensure_ascii=False, indent=2)
+    
+    print(f"Successfully seeded static profiles to {output_path}")
+
+if __name__ == "__main__":
+    main()

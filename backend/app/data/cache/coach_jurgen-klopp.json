@@ -1,0 +1,90 @@
+{
+  "name": "Jürgen Klopp",
+  "slug": "jurgen-klopp",
+  "active": true,
+  "api_id": 1,
+  "philosophy": "Gegenpressing / Heavy Metal Football",
+  "club": "Liverpool",
+  "emoji": "⚡",
+  "country": "🇩🇪",
+  "countryName": "Germany",
+  "bio": "Known for his charismatic leadership and explosive, fast-tempo football, Klopp resurrected Borussia Dortmund and Liverpool, guiding them to domestic and European glory.",
+  "style": "Klopp operates under the 'Heavy Metal Football' style, utilizing high-intensity Gegenpressing (counter-pressing). His teams immediately press the ball upon losing possession, looking to create quick vertical attack transitions.",
+  "clubsManaged": [
+    {
+      "name": "Mainz 05",
+      "years": "2001-2008"
+    },
+    {
+      "name": "Borussia Dortmund",
+      "years": "2008-2015"
+    },
+    {
+      "name": "Liverpool",
+      "years": "2015-2024"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Win %",
+      "value": "61.2%"
+    },
+    {
+      "label": "Matches",
+      "value": "1000+"
+    },
+    {
+      "label": "UCL Titles",
+      "value": "1"
+    },
+    {
+      "label": "League Titles",
+      "value": "3"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2004",
+      "title": "Mainz Bundesliga Promotion",
+      "description": "Guided Mainz to the Bundesliga for the first time in their history."
+    },
+    {
+      "year": "2011",
+      "title": "Dortmund Bundesliga Champion",
+      "description": "Won the Bundesliga title with an energetic, young squad, repeating in 2012."
+    },
+    {
+      "year": "2019",
+      "title": "Champions League Winner",
+      "description": "Won Liverpool's sixth European Cup, defeating Tottenham in the Madrid final."
+    },
+    {
+      "year": "2020",
+      "title": "Premier League Champion",
+      "description": "Led Liverpool to their first league title in 30 years with 99 points."
+    },
+    {
+      "year": "2024",
+      "title": "Liverpool Farewell",
+      "description": "Concluded his legendary tenure at Anfield, winning the EFL Cup in his final season."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "UEFA Champions League",
+      "count": 1
+    },
+    {
+      "title": "Premier League",
+      "count": 1
+    },
+    {
+      "title": "Bundesliga",
+      "count": 2
+    },
+    {
+      "title": "FA Cup",
+      "count": 1
+    }
+  ]
+}

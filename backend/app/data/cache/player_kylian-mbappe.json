@@ -1,0 +1,86 @@
+{
+  "name": "Kylian Mbappé",
+  "slug": "kylian-mbappe",
+  "active": true,
+  "api_id": 278,
+  "position": "Forward / Winger",
+  "country": "🇫🇷",
+  "countryName": "France",
+  "bio": "One of the most exciting talents of his generation, Mbappé burst onto the scene as a teenager and won the FIFA World Cup in 2018, scoring in the final at age 19.",
+  "style": "Possesses devastating pace, quick dribbling, and lethal composure in 1v1 situations. Mbappé thrives on exploiting high defensive lines, cutting inside from the left wing to curl shots into the far corner.",
+  "stats": [
+    {
+      "label": "Goals",
+      "value": "330+"
+    },
+    {
+      "label": "Assists",
+      "value": "150+"
+    },
+    {
+      "label": "World Cup Goals",
+      "value": "12"
+    },
+    {
+      "label": "App",
+      "value": "440+"
+    },
+    {
+      "label": "2024 Apps",
+      "value": "74"
+    },
+    {
+      "label": "2024 Goals",
+      "value": "52"
+    },
+    {
+      "label": "2024 Assists",
+      "value": "10"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2016",
+      "title": "Monaco Breakthrough",
+      "description": "Helped Monaco win the Ligue 1 title and reach the Champions League semi-finals."
+    },
+    {
+      "year": "2017",
+      "title": "Paris Saint-Germain Transfer",
+      "description": "Joined PSG in a historic deal, becoming the club's all-time record goalscorer."
+    },
+    {
+      "year": "2018",
+      "title": "World Cup Triumph",
+      "description": "Won the World Cup with France, claiming the Best Young Player award."
+    },
+    {
+      "year": "2022",
+      "title": "World Cup Final Hat-Trick",
+      "description": "Scored a historic hat-trick in the World Cup Final, winning the Golden Boot."
+    },
+    {
+      "year": "2024",
+      "title": "Real Madrid Signing",
+      "description": "Completed his highly-anticipated transfer to Real Madrid."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "FIFA World Cup",
+      "count": 1
+    },
+    {
+      "title": "Ligue 1",
+      "count": 7
+    },
+    {
+      "title": "UEFA Nations League",
+      "count": 1
+    },
+    {
+      "title": "Coupe de France",
+      "count": 4
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+[
+  {
+    "term": "False 9",
+    "slug": "false-9",
+    "category": "Position",
+    "shortDefinition": "A striker who drops deep into midfield to draw defenders out of position and create space.",
+    "definition": "An unconventional lone striker who drops deep into the midfield space rather than playing on the shoulder of the last defender. This movement creates a dilemma for opposing center-backs: follow the player and leave space behind, or stay in position and let them receive the ball unmarked.",
+    "example": "Lionel Messi under Pep Guardiola at Barcelona (2009-2012), or Roberto Firmino at Liverpool."
+  },
+  {
+    "term": "Regista",
+    "slug": "regista",
+    "category": "Role",
+    "shortDefinition": "A creative deep-lying playmaker operating in front of the defense to control the match tempo.",
+    "definition": "A Italian term for a creative playmaker operating in a deep defensive midfield position. Instead of focusing primarily on tackling and physical defense, the regista uses exceptional vision, passing accuracy, and tactical awareness to dictate the speed and direction of the team's attack from deep.",
+    "example": "Andrea Pirlo at Milan/Juventus, or Xabi Alonso at Real Madrid/Bayern Munich."
+  },
+  {
+    "term": "Gegenpressing",
+    "slug": "gegenpressing",
+    "category": "Tactic",
+    "shortDefinition": "An intense defensive system where the team presses immediately after losing possession.",
+    "definition": "A German tactical system (counter-pressing) where a team, upon losing the ball, immediately applies intense pressure to win it back in the opponent's territory, rather than retreating into a defensive shape. The goal is to catch the opponent off guard when they are transitioning from defending to attacking.",
+    "example": "Jürgen Klopp's Borussia Dortmund and Liverpool teams."
+  },
+  {
+    "term": "Tiki-Taka",
+    "slug": "tiki-taka",
+    "category": "Style",
+    "shortDefinition": "A style of play characterized by short passing, high possession, and fluid movement.",
+    "definition": "A style of play defined by short, quick passing, continuous movement, and maintaining high percentages of possession. Teams using Tiki-Taka aim to manipulate the opponent's shape by circulating the ball through triangles, waiting for gaps to open up in the defense.",
+    "example": "Pep Guardiola's Barcelona (2008-2012) and the Spain National Team (2008-2012)."
+  },
+  {
+    "term": "Number 10",
+    "slug": "number-10",
+    "category": "Position",
+    "shortDefinition": "An attacking midfielder operating behind the striker, responsible for creating chances.",
+    "definition": "A creative playmaker positioned between the central midfield and the forward line. Traditionally, this player possesses outstanding dribbling, vision, and passing capability, serving as the link to feed the strikers and unlock tight defenses.",
+    "example": "Diego Maradona, Zinedine Zidane, or Mesut Özil."
+  },
+  {
+    "term": "Poacher",
+    "slug": "poacher",
+    "category": "Role",
+    "shortDefinition": "A striker who specializes in close-range finishes and capitalizing on loose balls.",
+    "definition": "A traditional forward whose primary role is to score goals from inside the penalty box. Poachers typically do not participate heavily in buildup play; instead, they rely on elite positioning, reactions, and finishing to convert rebounds, crosses, and loose balls.",
+    "example": "Filippo Inzaghi, Javier Hernández (Chicharito), or Ruud van Nistelrooy."
+  },
+  {
+    "term": "Sweeper Keeper",
+    "slug": "sweeper-keeper",
+    "category": "Role",
+    "shortDefinition": "A goalkeeper who plays high up the pitch to intercept long balls and start attacks.",
+    "definition": "A goalkeeper who maintains a high position, acting as an extra defender by sweeping up long balls behind a high defensive line. They must possess excellent footwork, passing skills, and speed to sweep up threats outside their penalty area and aid in possession buildup.",
+    "example": "Manuel Neuer at Bayern Munich, or Ederson at Manchester City."
+  },
+  {
+    "term": "Inverted Winger",
+    "slug": "inverted-winger",
+    "category": "Position",
+    "shortDefinition": "A winger playing on the opposite side of their dominant foot to cut inside and shoot.",
+    "definition": "A wide player who plays on the opposite flank of their natural dominant foot (e.g., a left-footed winger playing on the right wing). This setup allows the winger to cut inward onto their stronger foot to shoot or make diagonal passes, while full-backs overlap to provide width.",
+    "example": "Arjen Robben cutting inside from the right wing, or Mohamed Salah at Liverpool."
+  },
+  {
+    "term": "Box-to-Box Midfielder",
+    "slug": "box-to-box",
+    "category": "Role",
+    "shortDefinition": "A versatile midfielder who contributes heavily to both defending and attacking.",
+    "definition": "An energetic central midfielder whose stamina, work rate, and intelligence allow them to impact play at both ends of the pitch. They assist in defense near their own box, transition the ball forward, and run into the opponent's box to assist or score.",
+    "example": "Steven Gerrard, Yaya Touré, or Arturo Vidal."
+  },
+  {
+    "term": "Parking the Bus",
+    "slug": "parking-the-bus",
+    "category": "Tactic",
+    "shortDefinition": "An ultra-defensive strategy focusing on keeping all players deep behind the ball.",
+    "definition": "A colloquial term for an extremely defensive tactical approach where a team places nearly all its outfield players deep in their own defensive third. The primary goal is to deny space, keep a compact structure, and prevent the opponent from scoring, often settling for a draw or a counter-attack goal.",
+    "example": "José Mourinho's Inter Milan against Barcelona in the 2010 Champions League Semi-Final."
+  },
+  {
+    "term": "Counter-Attack",
+    "slug": "counter-attack",
+    "category": "Tactic",
+    "shortDefinition": "A fast transition to attack immediately after winning the ball from the opponent.",
+    "definition": "A tactical action that takes advantage of the opponent's transition phase. By winning the ball back deep, a team quickly moves forward with speed and direct vertical passing before the opposing defenders can reorganize their defensive structure.",
+    "example": "Real Madrid under José Mourinho (2011-2012) or Leicester City during their 2015-16 Premier League title run."
+  },
+  {
+    "term": "Expected Goals (xG)",
+    "slug": "expected-goals",
+    "category": "Stat",
+    "shortDefinition": "A metric measuring the quality of a shot based on historical shot data.",
+    "definition": "A statistical metric that assesses the probability that a shot will result in a goal. Based on historical data from thousands of similar shots, xG assigns a value between 0 and 1, taking into account factors like shot distance, angle, defender pressure, and body part used.",
+    "example": "A penalty kick consistently has an xG value of 0.76 (76% chance of scoring)."
+  },
+  {
+    "term": "Pressing Trap",
+    "slug": "pressing-trap",
+    "category": "Tactic",
+    "shortDefinition": "A defensive setup designed to lure the opponent into passing to a vulnerable area.",
+    "definition": "A coordinated team action where the defending team deliberately leaves a specific opponent or passing lane open, only to immediately converge on that player with aggressive pressing once they receive the ball, aiming to force a turnover.",
+    "example": "Atletico Madrid under Diego Simeone crowding players near the touchline."
+  },
+  {
+    "term": "Libero",
+    "slug": "libero",
+    "category": "Position",
+    "shortDefinition": "A sweeper defender who has license to step forward into midfield to build attacks.",
+    "definition": "Also known as a sweeper, the Libero is a central defender who plays behind the defensive line, cleaning up loose balls. However, traditionally, they are also given complete freedom to bring the ball forward and join the midfield during buildup play.",
+    "example": "Franz Beckenbauer in the 1970s, or Franco Baresi."
+  },
+  {
+    "term": "Catenaccio",
+    "slug": "catenaccio",
+    "category": "Style",
+    "shortDefinition": "A classic Italian defensive system relying on a sweeper and tight man-marking.",
+    "definition": "Meaning 'door-bolt' in Italian, Catenaccio is a tactical system that emphasizes heavily organized, safety-first defending. It famously utilizes a sweeper (libero) behind a line of strict man-marking defenders to shut down all central spaces.",
+    "example": "Helenio Herrera's 'Grande Inter' team in the 1960s."
+  },
+  {
+    "term": "Total Football",
+    "slug": "total-football",
+    "category": "Style",
+    "shortDefinition": "A system where any outfield player can take over the role of any teammate.",
+    "definition": "A tactical theory in which any outfield player can temporarily take over the role of a teammate. If a defender moves forward, a midfielder drops back to cover. This fluid rotation requires all players to possess high technical capability and tactical versatility.",
+    "example": "Rinus Michels' Ajax and Netherlands teams in the 1970s, led by Johan Cruyff."
+  },
+  {
+    "term": "Mezzala",
+    "slug": "mezzala",
+    "category": "Role",
+    "shortDefinition": "An offensive central midfielder who drifts wide to exploit half-spaces.",
+    "definition": "An Italian term meaning 'half-winger'. It describes a central midfielder in a three-man midfield who is given license to push forward and drift into wide positions or half-spaces, acting as an additional attacker to overload wide areas.",
+    "example": "Kevin De Bruyne at Manchester City, or Ángel Di María under Carlo Ancelotti."
+  },
+  {
+    "term": "Raumdeuter",
+    "slug": "raumdeuter",
+    "category": "Role",
+    "shortDefinition": "A space interpreter who specializes in finding pockets of space in the box.",
+    "definition": "A German term meaning 'space investigator' or 'interpreter of space'. This player operates primarily from wide areas but drifts inside, using exceptional anticipation and positioning to exploit gaps in the opposition's defensive block to score or assist.",
+    "example": "Thomas Müller, who famously coined the term to describe his own playing style."
+  },
+  {
+    "term": "Target Man",
+    "slug": "target-man",
+    "category": "Role",
+    "shortDefinition": "A physical striker who excels at winning aerial duels and holding up play.",
+    "definition": "A physically dominant center-forward who acts as the outlet for long passes. The target man excels at winning aerial challenges, holding off defenders with their strength, and laying the ball off to oncoming midfielders or wingers.",
+    "example": "Olivier Giroud, Zlatan Ibrahimović, or Didier Drogba."
+  },
+  {
+    "term": "Deep-Lying Playmaker",
+    "slug": "deep-lying-playmaker",
+    "category": "Role",
+    "shortDefinition": "A central midfielder who sits deep to distribute passes and direct the team.",
+    "definition": "A midfielder positioned in front of the defense who coordinates the team's attack. They utilize their passing range to distribute long diagonals, vertical through-balls, and recycle possession, orchestrating attacks from a safe distance.",
+    "example": "Toni Kroos, or Michael Carrick."
+  },
+  {
+    "term": "Low Block",
+    "slug": "low-block",
+    "category": "Tactic",
+    "shortDefinition": "A defensive setup where the entire team sits deep to restrict space in their half.",
+    "definition": "A defensive tactic where a team compresses the vertical distance between their lines and sits deep in their own territory. By keeping the space behind their defense to a minimum, they make it extremely difficult for opponents to play through-balls.",
+    "example": "Burnley under Sean Dyche, or Atletico Madrid's compact shape."
+  },
+  {
+    "term": "Mid Block",
+    "slug": "mid-block",
+    "category": "Tactic",
+    "shortDefinition": "A defensive setup positioned in the middle third to control central areas.",
+    "definition": "A defensive structure where a team sets up their line of confrontation in the middle third of the pitch. They do not press aggressively high up, nor do they retreat all the way to their box, choosing instead to control and compact the midfield.",
+    "example": "Real Madrid in many big European matches, adjusting their shape to match situations."
+  },
+  {
+    "term": "High Block",
+    "slug": "high-block",
+    "category": "Tactic",
+    "shortDefinition": "A defensive setup located near the opponent's box to compress their space.",
+    "definition": "A defensive setup where the team's defensive lines are pushed high up the pitch, close to the center circle. This compresses the space available to the opponent to play out, though it leaves a large amount of green space behind the defenders.",
+    "example": "Hansi Flick's Bayern Munich (2019-2021) or Barcelona."
+  },
+  {
+    "term": "Underlapping Runs",
+    "slug": "underlapping-runs",
+    "category": "Tactic",
+    "shortDefinition": "A run made by a full-back through the inside channels (half-space) to support attackers.",
+    "definition": "A tactical run where an attacking full-back or midfielder runs on the inside of the winger (through the half-space channel) rather than on the outside touchline, pulling defenders inside and opening up cross angles.",
+    "example": "Kyle Walker or Joao Cancelo under Pep Guardiola at Manchester City."
+  },
+  {
+    "term": "Overlapping Runs",
+    "slug": "overlapping-runs",
+    "category": "Tactic",
+    "shortDefinition": "A run made by a full-back on the outside of a winger to provide crossing options.",
+    "definition": "A classic attacking maneuver where a full-back sprints past their winger along the outside touchline. This creates a 2v1 situation against the opponent's full-back, creating space for a cross.",
+    "example": "Trent Alexander-Arnold overlapping Mohamed Salah at Liverpool."
+  },
+  {
+    "term": "Double Pivot",
+    "slug": "double-pivot",
+    "category": "Tactic",
+    "shortDefinition": "Two defensive midfielders playing side-by-side to protect the defense.",
+    "definition": "A tactical setup (commonly in a 4-2-3-1 formation) using two central defensive midfielders in front of the back four. One player usually acts as the ball-winner/destroyer, while the other acts as a deep playmaker/pass recycler.",
+    "example": "Declan Rice and Thomas Partey at Arsenal, or Rodri and Mateo Kovačić at Manchester City."
+  },
+  {
+    "term": "Half-space",
+    "slug": "half-space",
+    "category": "Tactic",
+    "shortDefinition": "The strategic channels located between the wing and the center of the pitch.",
+    "definition": "A German coaching concept ('Halbraum') dividing the pitch vertically into five channels: left wing, left half-space, center, right half-space, and right wing. The half-space is highly valued because it allows players to receive the ball diagonal to the goal, giving them more passing and shooting angles.",
+    "example": "Exploited constantly in modern positional play systems."
+  },
+  {
+    "term": "Rest Defense",
+    "slug": "rest-defense",
+    "category": "Tactic",
+    "shortDefinition": "The positioning of defensive players while their team is actively attacking.",
+    "definition": "A concept referring to how a team organizes its defensive structure *while* it is in possession of the ball. Proper rest defense ensures that if possession is lost, defenders are already positioned to stop counter-attacks immediately.",
+    "example": "Center-backs and deep midfielders holding central positions while wingers attack."
+  },
+  {
+    "term": "Zonal Marking",
+    "slug": "zonal-marking",
+    "category": "Tactic",
+    "shortDefinition": "A defensive system where players defend specific zones rather than man-marking.",
+    "definition": "A defensive marking strategy where players are assigned a specific area of the pitch to defend. When an opponent enters their zone, they mark them, but they hand them off to a teammate if the opponent exits their zone.",
+    "example": "Used extensively in set-piece defending and modern defensive structures."
+  },
+  {
+    "term": "Man Marking",
+    "slug": "man-marking",
+    "category": "Tactic",
+    "shortDefinition": "A defensive system where each player is assigned to follow a specific opponent.",
+    "definition": "A defensive strategy where players are assigned a specific opponent to track and defend closely, regardless of where they move on the pitch. This system can completely shut down individuals but risks pulling defenders out of their team shape.",
+    "example": "Marcelo Bielsa's Leeds United team, or Gian Piero Gasperini's Atalanta."
+  },
+  {
+    "term": "Expected Assists (xA)",
+    "slug": "expected-assists",
+    "category": "Stat",
+    "shortDefinition": "A metric indicating the likelihood that a completed pass becomes an assist.",
+    "definition": "A statistical metric that measures the probability that a given completed pass will become a goal assist. It judges the quality of the pass based on the receiver's shot destination, pass type, and location, independent of whether the receiver scores.",
+    "example": "A pass that places a striker 1v1 with the keeper has a high xA value."
+  },
+  {
+    "term": "PPDA",
+    "slug": "ppda",
+    "category": "Stat",
+    "shortDefinition": "Passes Per Defensive Action — a metric used to measure pressing intensity.",
+    "definition": "A metric calculated by dividing the number of passes the opponent completes in their defensive and middle thirds by the number of defensive actions (tackles, interceptions, fouls) the pressing team makes. A lower PPDA indicates a more intense press.",
+    "example": "Highly pressing teams like Leeds or Manchester City typically have a PPDA of under 8.0."
+  },
+  {
+    "term": "Key Pass",
+    "slug": "key-pass",
+    "category": "Stat",
+    "shortDefinition": "Any pass that directly leads to a shot on target without scoring.",
+    "definition": "An attacking pass that creates a shot attempt for a teammate but does not result in a goal. It is a key indicator of a player's creativity and vision in the final third.",
+    "example": "A through-ball that unlocks a defense to set up a shot."
+  },
+  {
+    "term": "Inverted Full-back",
+    "slug": "inverted-full-back",
+    "category": "Position",
+    "shortDefinition": "A full-back who shifts centrally into midfield during possession.",
+    "definition": "A modern defensive role where a wide full-back tucks inside into the central midfield during possession buildup. This creates a central overload, secures the team against counters, and allows attacking midfielders to push higher.",
+    "example": "Oleksandr Zinchenko at Arsenal, or John Stones stepping forward into midfield at Manchester City."
+  },
+  {
+    "term": "Anchor Man",
+    "slug": "anchor-man",
+    "category": "Role",
+    "shortDefinition": "A defensive midfielder who stays disciplined in front of the center-backs.",
+    "definition": "A defensive midfielder who acts as a screen in front of the defensive line. Unlike dynamic box-to-box players, the anchor man rarely leaves their central position, focusing on blocking passing lanes and tackling.",
+    "example": "Claude Makélélé (which led to the term 'Makélélé Role'), or Casemiro."
+  },
+  {
+    "term": "Carrilero",
+    "slug": "carrilero",
+    "category": "Role",
+    "shortDefinition": "A shuttle midfielder in a diamond who covers wide defensive spaces.",
+    "definition": "A Spanish term meaning 'shuttler' or 'lane-player'. It describes a midfielder in a diamond shape who moves laterally, covering the half-space and wide channels to support the full-back and block opposition wingers.",
+    "example": "Gennaro Gattuso at Milan, or Jordan Henderson at Liverpool."
+  },
+  {
+    "term": "Shadow Striker",
+    "slug": "shadow-striker",
+    "category": "Role",
+    "shortDefinition": "A second striker who plays behind a target man and makes late box runs.",
+    "definition": "A forward role playing in the pocket behind a main target striker. The shadow striker uses the main forward's physical presence and movement to lose defenders, making late, explosive runs into the box to score.",
+    "example": "Thomas Müller, or Dele Alli in his prime under Mauricio Pochettino."
+  },
+  {
+    "term": "Inverted Wing-back",
+    "slug": "inverted-wing-back",
+    "category": "Position",
+    "shortDefinition": "A wing-back who runs inside into central channels rather than staying wide.",
+    "definition": "An attacking wing-back who, when the team attacks, leaves the touchline and runs into the central channels, functioning virtually as a central midfielder to control possession.",
+    "example": "Trent Alexander-Arnold in his hybrid midfielder/fullback role."
+  },
+  {
+    "term": "Tactical Foul",
+    "slug": "tactical-foul",
+    "category": "Tactic",
+    "shortDefinition": "A deliberate minor foul committed in midfield to stop a dangerous counter-attack.",
+    "definition": "A deliberate, professional foul committed high up the pitch or in the midfield zone to break up an opponent's dangerous transition counter-attack. Typically punished with a yellow card but valued by coaches as a defensive safeguard.",
+    "example": "A midfielder pulling an opponent's shirt just after losing the ball."
+  },
+  {
+    "term": "Overload to Isolate",
+    "slug": "overload-to-isolate",
+    "category": "Tactic",
+    "shortDefinition": "Overloading one side of the pitch to isolate a creative winger 1v1 on the other.",
+    "definition": "A tactical strategy where a team moves multiple players to one side of the field to attract the opponent's defensive structure, then quickly switches the ball to a creative winger isolated 1v1 on the opposite touchline.",
+    "example": "Pep Guardiola's teams switching the ball rapidly to Riyad Mahrez or Leroy Sané."
+  },
+  {
+    "term": "Third-man Run",
+    "slug": "third-man-run",
+    "category": "Tactic",
+    "shortDefinition": "An off-the-ball run where a third player receives a pass from a layoff.",
+    "definition": "A classic combination play involving three players. Player A passes to Player B (the decoy/target), drawing the defense's attention. Meanwhile, Player C (the third man) makes a run into open space. Player B immediately lays the ball off to Player C, bypassing the defenders.",
+    "example": "A staple of Barcelona's possession play under Pep Guardiola."
+  },
+  {
+    "term": "Cover Shadow",
+    "slug": "cover-shadow",
+    "category": "Tactic",
+    "shortDefinition": "Positioning oneself to block the passing lane to an opponent behind.",
+    "definition": "A defensive press technique where a player positioning themselves to block the passing lane to an opponent behind them, effectively taking that player out of the game without having to mark them directly.",
+    "example": "A striker pressing a center-back while standing in the passing lane to the defensive midfielder."
+  },
+  {
+    "term": "Positional Play",
+    "slug": "positional-play",
+    "category": "Style",
+    "shortDefinition": "A style of play based on spatial guidelines to create passing options.",
+    "definition": "Known as 'Juego de Posición' in Spanish, it is a framework where the pitch is divided into zones. Players must adjust their positions relative to the ball, teammates, and opponents to create passing options, maintain structural balance, and create overloads.",
+    "example": "Pep Guardiola's tactical philosophy at Barcelona, Bayern, and Manchester City."
+  },
+  {
+    "term": "Route One",
+    "slug": "route-one",
+    "category": "Style",
+    "shortDefinition": "A direct attacking style using long aerial passes straight to the forwards.",
+    "definition": "A direct, physical attacking style popular in British football. The ball is kicked long, high, and direct from defense/goalkeeper to the forwards in the opponent's box, bypassing the midfield completely to contest second balls.",
+    "example": "Wimbledon's 'Crazy Gang' in the late 1980s, or Sam Allardyce's teams."
+  },
+  {
+    "term": "Expected Threat (xT)",
+    "slug": "expected-threat",
+    "category": "Stat",
+    "shortDefinition": "A metric measuring how much a pass or carry increases the probability of scoring.",
+    "definition": "An advanced possession metric that assigns value to actions (passes and ball carries) based on how much they move the ball into more dangerous positions, measuring a player's ability to progress play constructively.",
+    "example": "A pass from the midfield circle to the edge of the box has a high xT value."
+  },
+  {
+    "term": "Progressive Passes",
+    "slug": "progressive-passes",
+    "category": "Stat",
+    "shortDefinition": "Completed forward passes that move the ball significantly closer to the opponent's goal.",
+    "definition": "A completed pass that moves the ball significantly towards the opponent's goal line (usually defined as at least 10 yards closer in the middle third, or any pass into the penalty box).",
+    "example": "Midfielders like Kevin De Bruyne score highly in progressive passing metrics."
+  }
+]

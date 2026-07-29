@@ -1,0 +1,98 @@
+{
+  "name": "Diego Simeone",
+  "slug": "diego-simeone",
+  "active": true,
+  "api_id": 1595,
+  "philosophy": "Cholismo / Intense Defensive Block",
+  "club": "Atletico Madrid",
+  "emoji": "🦁",
+  "country": "🇦🇷",
+  "countryName": "Argentina",
+  "bio": "Famous for his intense touchline energy, Diego 'El Cholo' Simeone broke the Barcelona-Real Madrid duopoly in Spain, transforming Atletico Madrid into a defensive juggernaut.",
+  "style": "Simeone's philosophy ('Cholismo') relies on a compact, disciplined 4-4-2 low/mid block, extreme aggression, defensive solidarity, and vertical counter-attacks. He treats tactical discipline and team unity as paramount.",
+  "clubsManaged": [
+    {
+      "name": "Racing Club",
+      "years": "2006, 2011"
+    },
+    {
+      "name": "Estudiantes",
+      "years": "2006-2007"
+    },
+    {
+      "name": "River Plate",
+      "years": "2007-2008"
+    },
+    {
+      "name": "San Lorenzo",
+      "years": "2009-2010"
+    },
+    {
+      "name": "Atletico Madrid",
+      "years": "2011-Present"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Win %",
+      "value": "59.0%"
+    },
+    {
+      "label": "Matches",
+      "value": "680+"
+    },
+    {
+      "label": "Europa Leagues",
+      "value": "2"
+    },
+    {
+      "label": "La Liga Titles",
+      "value": "2"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2011",
+      "title": "Atletico Madrid Appointment",
+      "description": "Took over a struggling Atletico team, immediately instilling defensive discipline."
+    },
+    {
+      "year": "2012",
+      "title": "Europa League Success",
+      "description": "Won the UEFA Europa League in his first half-season, defeating Athletic Bilbao."
+    },
+    {
+      "year": "2014",
+      "title": "La Liga Champions",
+      "description": "Broke the Real-Barca duopoly, winning the league and reaching the UCL Final."
+    },
+    {
+      "year": "2018",
+      "title": "Second Europa League",
+      "description": "Won his second Europa League title with a 3-0 victory over Marseille."
+    },
+    {
+      "year": "2021",
+      "title": "Second La Liga Triumph",
+      "description": "Won his second La Liga title, adapting the team into a flexible defensive system."
+    }
+  ],
+  "trophies": [
+    {
+      "title": "La Liga",
+      "count": 2
+    },
+    {
+      "title": "UEFA Europa League",
+      "count": 2
+    },
+    {
+      "title": "Copa del Rey",
+      "count": 1
+    },
+    {
+      "title": "UEFA Super Cup",
+      "count": 2
+    }
+  ]
+}
